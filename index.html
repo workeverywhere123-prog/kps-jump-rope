@@ -20,11 +20,11 @@
      스티키 헤더 + 페이지 네비게이션
 ════════════════════════════════════════ -->
 <header style="background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.09);position:sticky;top:0;z-index:200;">
-  <div style="max-width:860px;margin:0 auto;padding:8px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+  <div id="header-inner" style="max-width:860px;margin:0 auto;padding:8px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
 
     <!-- 학교 배지 + 팀명 -->
     <div style="display:flex;align-items:center;gap:12px;">
-      <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;cursor:pointer;" onclick="onBadgeTap()">
+      <svg id="header-logo" width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;cursor:pointer;" onclick="onBadgeTap()">
         <circle cx="50" cy="50" r="48" fill="#1a3560" stroke="#c9a227" stroke-width="2.5"/>
         <circle cx="50" cy="50" r="40" fill="none" stroke="#c9a227" stroke-width="1.2" stroke-dasharray="3,2"/>
         <path id="arc-top" d="M18,50 A32,32 0 1,1 82,50" fill="none"/>
@@ -40,55 +40,55 @@
         <text x="74" y="52" text-anchor="middle" font-size="7" fill="#c9a227">★</text>
       </svg>
       <div onclick="window.renderHomePage?.()" style="cursor:pointer;" title="홈으로 이동">
-        <div style="font-size:.62rem;color:#999;letter-spacing:.06em;text-transform:uppercase;">Kew Primary School · Melbourne</div>
-        <div style="font-size:.95rem;font-weight:900;color:var(--navy);line-height:1.2;">
+        <div id="header-title-sub" style="font-size:.62rem;color:#999;letter-spacing:.06em;text-transform:uppercase;">Kew Primary School · Melbourne</div>
+        <div style="font-size:.9rem;font-weight:900;color:var(--navy);line-height:1.2;white-space:nowrap;">
           KPS <span style="color:var(--gold);" data-i18n="site.name">Jump Rope Club</span>
         </div>
       </div>
     </div>
 
     <!-- 유저 배지 + 진행 현황 -->
-    <div style="display:flex;align-items:center;gap:10px;">
+    <div style="display:flex;align-items:center;gap:8px;">
       <div id="user-badge-area"></div>
-      <div style="text-align:right;">
+      <div id="header-progress-section" style="text-align:right;">
         <div style="font-size:.62rem;color:#aaa;font-weight:600;" data-i18n="header.progress">Progress</div>
-        <div style="font-size:.95rem;font-weight:900;color:var(--navy);" id="header-progress">0 / 90일</div>
+        <div style="font-size:.88rem;font-weight:900;color:var(--navy);" id="header-progress">0 / 90일</div>
       </div>
     </div>
   </div>
 
   <!-- 페이지 탭 네비게이션 -->
-  <div style="background:var(--navy);display:flex;justify-content:center;gap:0;">
+  <div id="nav-tab-bar" style="background:var(--navy);display:flex;justify-content:center;gap:0;">
     <button id="tab-community" onclick="switchPage('community')"
       style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
       <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Community</div>
-      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.community.sub">Team Info</div>
+      <div class="nav-sub" style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.community.sub">Team Info</div>
     </button>
     <button id="tab-achievement" onclick="switchPage('achievement')"
       style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid var(--goldf);transition:all .2s;color:#fff;">
       <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Achievement</div>
-      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.achievement.sub">Training &amp; Challenge</div>
+      <div class="nav-sub" style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.achievement.sub">Training &amp; Challenge</div>
     </button>
     <button id="tab-connect" onclick="switchPage('connect')"
       style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
       <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Connect</div>
-      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.connect.sub">Schedule &amp; Connect</div>
+      <div class="nav-sub" style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.connect.sub">Schedule &amp; Connect</div>
     </button>
     <button id="tab-gallery" onclick="switchPage('gallery')"
       style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
       <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Gallery</div>
-      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.gallery.sub">Activity Log</div>
+      <div class="nav-sub" style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.gallery.sub">Activity Log</div>
     </button>
     <button id="tab-wellness" onclick="switchPage('wellness')"
       style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
       <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Wellness</div>
-      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.wellness.sub">Health Guide</div>
+      <div class="nav-sub" style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.wellness.sub">Health Guide</div>
     </button>
     <button id="tab-stage" onclick="switchPage('stage')"
       style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);position:relative;">
       <div style="position:absolute;top:4px;right:6px;background:var(--gold);color:#1a1a2e;font-size:.48rem;font-weight:900;padding:1px 5px;border-radius:6px;letter-spacing:.04em;">NEW</div>
       <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Stage</div>
-      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.stage.sub">Performance</div>
+      <div class="nav-sub" style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.stage.sub">Performance</div>
     </button>
   </div>
 </header>
@@ -837,7 +837,7 @@
 <!-- ════════════════════════════════════════
      하단 고정 도장 버튼 (Achievement 전용)
 ════════════════════════════════════════ -->
-<div id="stamp-bar" style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid #e2e8f0;padding:12px 18px;z-index:150;">
+<div id="stamp-bar" style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid #e2e8f0;padding:12px 18px calc(12px + env(safe-area-inset-bottom));z-index:150;">
   <div style="max-width:860px;margin:0 auto;">
     <button id="main-stamp-btn" onclick="handleStampClick()" disabled
       style="width:100%;padding:16px;border:none;border-radius:16px;font-size:.95rem;font-weight:900;font-family:inherit;cursor:not-allowed;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .25s;background:#e2e8f0;color:#94a3b8;">

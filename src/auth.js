@@ -372,20 +372,24 @@ function _homeHTML(){
   return `
   <style>
     @media(max-width:560px){
-      #home-hero{padding:70px 16px 50px!important;gap:24px!important}
-      #home-auth{padding:22px 18px!important}
+      #home-hero{padding:60px 16px 40px!important;gap:20px!important}
+      #home-auth{padding:20px 16px!important}
+      #home-auth input,#home-auth button{font-size:.88rem!important}
+    }
+    @media(max-width:400px){
+      #home-hero{padding:50px 12px 32px!important}
     }
   </style>
 
-  <nav style="position:sticky;top:0;z-index:100;background:rgba(4,4,15,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,162,39,.15);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;">
-    <div style="display:flex;align-items:center;gap:10px;">
-      <svg width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <nav style="position:sticky;top:0;z-index:100;background:rgba(4,4,15,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,162,39,.15);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+    <div style="display:flex;align-items:center;gap:8px;min-width:0;">
+      <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
         <circle cx="50" cy="50" r="48" fill="#1a3560" stroke="#c9a227" stroke-width="2.5"/>
         <text x="50" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="bold" fill="#fff">K</text>
       </svg>
-      <span style="font-size:.82rem;font-weight:900;color:#fff;letter-spacing:.02em;">KPS Jump Rope Club</span>
+      <span style="font-size:.78rem;font-weight:900;color:#fff;letter-spacing:.01em;white-space:nowrap;">KPS Jump Rope Club</span>
     </div>
-    ${navRight}
+    <div style="flex-shrink:0;">${navRight}</div>
   </nav>
 
   <!-- ─── 센터 히어로: 브랜딩 + 로그인/가입 카드 세로 배치 ─── -->

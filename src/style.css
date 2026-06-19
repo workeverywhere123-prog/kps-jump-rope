@@ -65,3 +65,58 @@ body { font-family:'Noto Sans KR',sans-serif; background:#edf2f8; }
 .btn-amber  { background:linear-gradient(135deg,#e65100,#fb8c00); }
 .btn-red    { background:linear-gradient(135deg,var(--coral),#c62828); }
 .btn-locked { background:#e2e8f0; color:#94a3b8; cursor:not-allowed; }
+
+/* ── 터치 최적화 ── */
+* { -webkit-tap-highlight-color: transparent; }
+button, [onclick] { touch-action: manipulation; }
+input, textarea, select { font-size: 16px !important; } /* iOS zoom 방지 */
+
+/* ── iPhone safe area ── */
+#stamp-bar {
+  padding-bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+}
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ── 모바일 헤더 최적화 ── */
+@media (max-width: 540px) {
+  #header-inner {
+    padding: 5px 12px !important;
+    gap: 8px !important;
+  }
+  #header-logo {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  #header-title-sub {
+    display: none !important;
+  }
+  #header-progress-section {
+    display: none !important;
+  }
+  .nav-sub {
+    display: none !important;
+  }
+  #nav-tab-bar button {
+    padding: 8px 3px !important;
+    min-height: 40px;
+  }
+  /* 히어로 섹션 패딩 줄이기 */
+  .hero-bg {
+    padding: 20px 16px 18px !important;
+  }
+  /* 콘텐츠 패딩 */
+  #page-achievement > div:last-child {
+    padding: 0 0 100px !important;
+  }
+  /* 카드 패딩 조정 */
+  #skills-list {
+    padding: 0 12px !important;
+    gap: 14px !important;
+  }
+  /* 데이 스트립 패딩 */
+  #days-strip-wrapper {
+    padding: 12px 12px 10px !important;
+  }
+}
