@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KPS Jump Rope Club — Kew Primary School</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet" />
+</head>
+<body class="select-none">
+
+<!-- ════════════════════════════════════════
+     스티키 헤더 + 페이지 네비게이션
+════════════════════════════════════════ -->
+<header style="background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.09);position:sticky;top:0;z-index:200;">
+  <div style="max-width:860px;margin:0 auto;padding:8px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+
+    <!-- 학교 배지 + 팀명 -->
+    <div style="display:flex;align-items:center;gap:12px;">
+      <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;cursor:pointer;" onclick="onBadgeTap()">
+        <circle cx="50" cy="50" r="48" fill="#1a3560" stroke="#c9a227" stroke-width="2.5"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#c9a227" stroke-width="1.2" stroke-dasharray="3,2"/>
+        <path id="arc-top" d="M18,50 A32,32 0 1,1 82,50" fill="none"/>
+        <text font-family="Georgia,serif" font-size="8.5" font-weight="bold" fill="#c9a227" letter-spacing="2">
+          <textPath href="#arc-top" startOffset="8%">KEW PRIMARY SCHOOL</textPath>
+        </text>
+        <text x="50" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="32" font-weight="bold" fill="#fff">K</text>
+        <path id="arc-bot" d="M24,63 A28,28 0 0,0 76,63" fill="none"/>
+        <text font-family="Georgia,serif" font-size="8" font-weight="bold" fill="#c9a227" letter-spacing="2">
+          <textPath href="#arc-bot" startOffset="12%">BE WORTHY</textPath>
+        </text>
+        <text x="26" y="52" text-anchor="middle" font-size="7" fill="#c9a227">★</text>
+        <text x="74" y="52" text-anchor="middle" font-size="7" fill="#c9a227">★</text>
+      </svg>
+      <div onclick="window.renderHomePage?.()" style="cursor:pointer;" title="홈으로 이동">
+        <div style="font-size:.62rem;color:#999;letter-spacing:.06em;text-transform:uppercase;">Kew Primary School · Melbourne</div>
+        <div style="font-size:.95rem;font-weight:900;color:var(--navy);line-height:1.2;">
+          KPS <span style="color:var(--gold);" data-i18n="site.name">Jump Rope Club</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 유저 배지 + 진행 현황 -->
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div id="user-badge-area"></div>
+      <div style="text-align:right;">
+        <div style="font-size:.62rem;color:#aaa;font-weight:600;" data-i18n="header.progress">Progress</div>
+        <div style="font-size:.95rem;font-weight:900;color:var(--navy);" id="header-progress">0 / 90일</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 페이지 탭 네비게이션 -->
+  <div style="background:var(--navy);display:flex;justify-content:center;gap:0;">
+    <button id="tab-community" onclick="switchPage('community')"
+      style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
+      <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Community</div>
+      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.community.sub">Team Info</div>
+    </button>
+    <button id="tab-achievement" onclick="switchPage('achievement')"
+      style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid var(--goldf);transition:all .2s;color:#fff;">
+      <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Achievement</div>
+      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.achievement.sub">Training &amp; Challenge</div>
+    </button>
+    <button id="tab-connect" onclick="switchPage('connect')"
+      style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
+      <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Connect</div>
+      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.connect.sub">Schedule &amp; Connect</div>
+    </button>
+    <button id="tab-gallery" onclick="switchPage('gallery')"
+      style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
+      <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Gallery</div>
+      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.gallery.sub">Activity Log</div>
+    </button>
+    <button id="tab-wellness" onclick="switchPage('wellness')"
+      style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);">
+      <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Wellness</div>
+      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.wellness.sub">Health Guide</div>
+    </button>
+    <button id="tab-stage" onclick="switchPage('stage')"
+      style="flex:1;max-width:200px;padding:9px 6px;border:none;background:transparent;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent;transition:all .2s;color:rgba(255,255,255,.6);position:relative;">
+      <div style="position:absolute;top:4px;right:6px;background:var(--gold);color:#1a1a2e;font-size:.48rem;font-weight:900;padding:1px 5px;border-radius:6px;letter-spacing:.04em;">NEW</div>
+      <div style="font-size:.72rem;font-weight:900;letter-spacing:.08em;">Stage</div>
+      <div style="font-size:.6rem;opacity:.7;margin-top:1px;" data-i18n="nav.stage.sub">Performance</div>
+    </button>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════
+     PAGE: Community
+════════════════════════════════════════ -->
+<div id="page-community" style="display:none;min-height:100vh;background:#f8faff;padding-bottom:40px;">
+
+  <!-- 히어로 -->
+  <div class="hero-bg" style="padding:32px 20px 28px;color:#fff;text-align:center;">
+    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--goldf);margin-bottom:6px;" data-i18n="comm.hero.tagline">Together we run, together we grow</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:8px;">KPS Jump Rope Club 🪢</div>
+    <div style="font-size:.82rem;opacity:.8;">Kew Primary School · Melbourne</div>
+  </div>
+
+  <div style="max-width:680px;margin:0 auto;padding:24px 16px;">
+
+    <!-- 팀 리더 카드 -->
+    <div style="background:#fff;border-radius:22px;padding:28px 24px;box-shadow:0 4px 24px rgba(0,0,0,.08);border:2px solid var(--gold);margin-bottom:20px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle at 100% 0%,rgba(201,162,39,.08),transparent 70%);pointer-events:none;"></div>
+      <div style="display:flex;align-items:center;gap:5px;margin-bottom:18px;">
+        <span style="background:linear-gradient(135deg,var(--gold),#e8a800);color:#fff;font-size:.68rem;font-weight:900;padding:4px 11px;border-radius:20px;letter-spacing:.05em;">👑 TEAM LEADER</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;">
+        <!-- 아바타 영역 (JS 주입) -->
+        <div id="leader-avatar-area" style="width:80px;height:100px;flex-shrink:0;background:linear-gradient(135deg,#eef2ff,#e0e7ff);border-radius:16px;border:2.5px solid var(--gold);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <svg width="60" height="80" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+            <rect x="21" y="10" width="58" height="56" rx="3" fill="#f5c5a3"/>
+            <rect x="29" y="68" width="42" height="30" rx="2" fill="#1a3560"/>
+            <rect x="14" y="68" width="15" height="26" rx="2" fill="#1a3560"/>
+            <rect x="71" y="68" width="15" height="26" rx="2" fill="#1a3560"/>
+            <rect x="29" y="98" width="19" height="26" rx="2" fill="#333"/>
+            <rect x="52" y="98" width="19" height="26" rx="2" fill="#333"/>
+            <rect x="30" y="22" width="16" height="14" rx="1" fill="white"/>
+            <rect x="54" y="22" width="16" height="14" rx="1" fill="white"/>
+            <rect x="34" y="26" width="10" height="10" fill="#4a88cc"/>
+            <rect x="58" y="26" width="10" height="10" fill="#4a88cc"/>
+            <rect x="35" y="27" width="8" height="8" fill="#1a1a2e"/>
+            <rect x="59" y="27" width="8" height="8" fill="#1a1a2e"/>
+            <rect x="40" y="25" width="3" height="3" fill="white"/>
+            <rect x="64" y="25" width="3" height="3" fill="white"/>
+            <rect x="26" y="20" width="16" height="4" rx="1" fill="rgba(0,0,0,.4)"/>
+            <rect x="58" y="20" width="16" height="4" rx="1" fill="rgba(0,0,0,.4)"/>
+            <rect x="38" y="42" width="24" height="5" rx="2" fill="rgba(0,0,0,.08)"/>
+            <rect x="40" y="43" width="20" height="3" rx="1" fill="rgba(0,0,0,.12)"/>
+          </svg>
+        </div>
+        <div style="flex:1;">
+          <div id="leader-name" style="font-size:1.5rem;font-weight:900;color:var(--navy);line-height:1.1;">이시형</div>
+          <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:5px;">
+            <span style="background:#eef2ff;color:#4f46e5;font-size:.68rem;font-weight:800;padding:3px 9px;border-radius:10px;" data-i18n="comm.leader.badge">🪢 Jump Rope Club Founder</span>
+            <span id="leader-challenge-badge-ctr"></span>
+          </div>
+          <div style="margin-top:10px;font-size:.8rem;color:#475569;line-height:1.6;font-style:italic;" data-i18n="comm.leader.quote">
+            "Let's become the best through jump rope together! A little each day — there's nothing we can't do as a team."
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 클럽 소개 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;">About the Club</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:10px;" data-i18n="comm.about.title">What is the KPS Jump Rope Club?</h3>
+      <p style="font-size:.84rem;color:#475569;line-height:1.8;" data-i18n="comm.about.desc">
+        The Kew Primary School Jump Rope Club was founded and led by team leader <strong>Sihyung Lee</strong>. Through 90 days of structured training from basics to advanced skills, we grow together. Faster and higher as a team than alone!
+      </p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;">
+        <div style="background:#f0f5ff;border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:1.4rem;font-weight:900;color:var(--navy);" data-i18n="comm.about.days">90 Days</div>
+          <div style="font-size:.7rem;color:#64748b;font-weight:700;margin-top:2px;" data-i18n="comm.about.days_label">Challenge Period</div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:1.4rem;font-weight:900;color:#166534;" data-i18n="comm.about.phases">3 Levels</div>
+          <div style="font-size:.7rem;color:#64748b;font-weight:700;margin-top:2px;" data-i18n="comm.about.phases_label">Beginner · Intermediate · Advanced</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 클럽 목표 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;">Club Goals</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:#f8faff;border-radius:12px;border-left:3px solid #4f46e5;">
+          <span style="font-size:1.2rem;flex-shrink:0;">🎯</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);" data-i18n="comm.goal1.title">Build Core Fitness</div>
+            <div style="font-size:.74rem;color:#64748b;margin-top:2px;" data-i18n="comm.goal1.desc">Develop endurance and coordination through consistent jump rope training</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:#f8faff;border-radius:12px;border-left:3px solid var(--green);">
+          <span style="font-size:1.2rem;flex-shrink:0;">🤝</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);" data-i18n="comm.goal2.title">Strengthen Teamwork</div>
+            <div style="font-size:.74rem;color:#64748b;margin-top:2px;" data-i18n="comm.goal2.desc">Build a team culture of challenging together and cheering each other on</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:#f8faff;border-radius:12px;border-left:3px solid var(--gold);">
+          <span style="font-size:1.2rem;flex-shrink:0;">🏆</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);" data-i18n="comm.goal3.title">Joy of Achievement</div>
+            <div style="font-size:.74rem;color:#64748b;margin-top:2px;" data-i18n="comm.goal3.desc">Build self-confidence by completing the 90-day challenge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팀원 섹션 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">Team Members</div>
+      <div style="font-size:.78rem;color:#94a3b8;margin-bottom:14px;" data-i18n="comm.members.hint">Click to view individual profiles</div>
+      <div id="community-member-grid"><!-- JS 렌더링 --></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;display:none;">
+        <!-- 리더 슬롯 -->
+        <div style="background:linear-gradient(135deg,#fef9ec,#fef3d0);border:2px solid var(--gold);border-radius:14px;padding:14px 10px;text-align:center;">
+          <div style="width:44px;height:44px;border-radius:10px;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:1.1rem;">👑</div>
+          <div style="font-size:.74rem;font-weight:900;color:var(--navy);">이시형</div>
+          <div style="font-size:.62rem;color:#a07c10;font-weight:700;margin-top:2px;">Team Leader</div>
+        </div>
+        <!-- 빈 슬롯들 -->
+        <div style="background:#f8faff;border:2px dashed #cbd5e1;border-radius:14px;padding:14px 10px;text-align:center;">
+          <div style="width:44px;height:44px;border-radius:10px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:1.1rem;">🪢</div>
+          <div style="font-size:.74rem;font-weight:700;color:#94a3b8;">멤버 모집 중</div>
+          <div style="font-size:.62rem;color:#cbd5e1;margin-top:2px;">— 빈 자리 —</div>
+        </div>
+        <div style="background:#f8faff;border:2px dashed #cbd5e1;border-radius:14px;padding:14px 10px;text-align:center;">
+          <div style="width:44px;height:44px;border-radius:10px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:1.1rem;">🪢</div>
+          <div style="font-size:.74rem;font-weight:700;color:#94a3b8;">멤버 모집 중</div>
+          <div style="font-size:.62rem;color:#cbd5e1;margin-top:2px;">— 빈 자리 —</div>
+        </div>
+        <div style="background:#f8faff;border:2px dashed #cbd5e1;border-radius:14px;padding:14px 10px;text-align:center;">
+          <div style="width:44px;height:44px;border-radius:10px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:1.1rem;">🪢</div>
+          <div style="font-size:.74rem;font-weight:700;color:#94a3b8;">멤버 모집 중</div>
+          <div style="font-size:.62rem;color:#cbd5e1;margin-top:2px;">— 빈 자리 —</div>
+        </div>
+        <div style="background:#f8faff;border:2px dashed #cbd5e1;border-radius:14px;padding:14px 10px;text-align:center;">
+          <div style="width:44px;height:44px;border-radius:10px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:1.1rem;">🪢</div>
+          <div style="font-size:.74rem;font-weight:700;color:#94a3b8;">멤버 모집 중</div>
+          <div style="font-size:.62rem;color:#cbd5e1;margin-top:2px;">— 빈 자리 —</div>
+        </div>
+        <div style="background:#f8faff;border:2px dashed #cbd5e1;border-radius:14px;padding:14px 10px;text-align:center;">
+          <div style="width:44px;height:44px;border-radius:10px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:1.1rem;">🪢</div>
+          <div style="font-size:.74rem;font-weight:700;color:#94a3b8;">멤버 모집 중</div>
+          <div style="font-size:.62rem;color:#cbd5e1;margin-top:2px;">— 빈 자리 —</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: Achievement (기존 메인)
+════════════════════════════════════════ -->
+<div id="page-achievement" style="display:block;">
+
+  <!-- 히어로 배너 -->
+  <div class="hero-bg" style="padding:32px 20px 28px;color:#fff;text-align:center;">
+    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--goldf);margin-bottom:6px;" data-i18n="ach.hero.tagline">Together we run, together we grow</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;line-height:1.2;margin-bottom:14px;" data-i18n="ach.hero.title">Reach for the top with Jump Rope 🪢</div>
+    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,.15);border-radius:12px;padding:10px 18px;min-width:80px;">
+        <div style="font-size:1.4rem;font-weight:900;" id="stat-completed">0</div>
+        <div style="font-size:.68rem;opacity:.75;" data-i18n="ach.stat.done">Days Done</div>
+      </div>
+      <div style="background:rgba(255,255,255,.15);border-radius:12px;padding:10px 18px;min-width:80px;">
+        <div style="font-size:1.4rem;font-weight:900;" id="stat-current">Day 1</div>
+        <div style="font-size:.68rem;opacity:.75;" data-i18n="ach.stat.current">Current</div>
+      </div>
+      <div style="background:rgba(201,162,39,.3);border-radius:12px;padding:10px 18px;min-width:80px;">
+        <div style="font-size:1.4rem;font-weight:900;" id="stat-streak">🔥 0</div>
+        <div style="font-size:.68rem;opacity:.75;" data-i18n="ach.stat.streak">Streak</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 메인 콘텐츠 -->
+  <div style="max-width:860px;margin:0 auto;padding:0 0 120px;">
+
+    <!-- 30일 캘린더 스트립 -->
+    <div style="background:#fff;border-bottom:1px solid #e8edf5;padding:16px 18px 14px;box-shadow:0 1px 6px rgba(0,0,0,.04);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <span style="font-size:.75rem;font-weight:900;color:var(--navy);background:#eef2ff;padding:4px 12px;border-radius:20px;letter-spacing:.05em;" data-i18n="ach.progress.badge">🏅 90-Day Journey</span>
+        <span style="font-size:.75rem;font-weight:700;color:#64748b;" id="progress-text">0 / 90 Days</span>
+      </div>
+      <div class="no-scrollbar" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;" id="days-strip"></div>
+    </div>
+
+    <!-- 오늘의 미션 헤더 -->
+    <div style="background:linear-gradient(to bottom,#f0f5ff,transparent);padding:22px 18px 14px;text-align:center;">
+      <h2 style="font-size:1.25rem;font-weight:900;color:var(--navy);margin-bottom:8px;" id="routine-title">📅 { Day 1 } 오늘의 도전!</h2>
+      <div style="display:inline-block;background:#fffbeb;color:#92400e;font-size:.75rem;font-weight:700;padding:6px 14px;border-radius:20px;border:1px solid #fde68a;" data-i18n="ach.today.desc">
+        🏅 Beginner 30 → Intermediate 30 → Advanced 30, 90 Days Total!
+      </div>
+    </div>
+
+    <!-- 페이즈 진행 바 -->
+    <div style="padding:0 16px 14px;">
+      <div style="background:#e2e8f0;border-radius:16px;padding:4px;display:flex;gap:2px;" id="phase-bar"></div>
+    </div>
+
+    <!-- 스킬 카드 목록 -->
+    <div style="padding:0 16px;display:flex;flex-direction:column;gap:18px;" id="skills-list"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: Connect
+════════════════════════════════════════ -->
+<div id="page-connect" style="display:none;min-height:100vh;background:#f8faff;padding-bottom:40px;">
+
+  <!-- 히어로 -->
+  <div class="hero-bg" style="padding:28px 20px 24px;color:#fff;text-align:center;">
+    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--goldf);margin-bottom:4px;" data-i18n="connect.hero.tagline">Our Shared Schedule</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;line-height:1.2;" data-i18n="connect.hero.title">Connect — Schedule &amp; Communication 🗓️</div>
+  </div>
+
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px;">
+
+    <!-- 연습 스케줄 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;">📋 Weekly Practice Schedule</div>
+        <div id="weekly-schedule-edit-btn"></div>
+      </div>
+      <div id="weekly-schedule-area"><!-- JS 렌더링 --></div>
+    </div>
+
+    <!-- 달력 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;">📅 Practice Calendar</div>
+      <div id="connect-calendar"></div>
+    </div>
+
+    <!-- 문의하기 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;" data-i18n="connect.contact.label">💬 Contact Us</div>
+      <div style="font-size:.82rem;color:#64748b;margin-bottom:14px;line-height:1.6;" data-i18n="connect.contact.desc">Questions about joining? Leave a message and Team Leader Sihyung Lee will reply!</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <input id="inquiry-name" type="text" placeholder="Your name" data-i18n-ph="connect.contact.name_ph"
+          style="padding:12px 14px;border:2px solid #e2e8f0;border-radius:12px;font-size:.88rem;font-family:inherit;outline:none;width:100%;box-sizing:border-box;-webkit-user-select:text;user-select:text;"
+          onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='#e2e8f0'">
+        <textarea id="inquiry-msg" placeholder="Enter your message..." data-i18n-ph="connect.contact.msg_ph"
+          style="padding:12px 14px;border:2px solid #e2e8f0;border-radius:12px;font-size:.88rem;font-family:inherit;outline:none;width:100%;box-sizing:border-box;resize:none;height:100px;-webkit-user-select:text;user-select:text;"
+          onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='#e2e8f0'"></textarea>
+        <button onclick="submitInquiry()"
+          style="padding:13px;background:linear-gradient(135deg,var(--navy),#1565c0);color:#fff;border:none;border-radius:12px;font-size:.88rem;font-weight:900;font-family:inherit;cursor:pointer;">
+          <span data-i18n="connect.contact.btn">Send Message ✉️</span>
+        </button>
+      </div>
+      <div id="inquiry-list" style="margin-top:16px;display:flex;flex-direction:column;gap:8px;"></div>
+    </div>
+
+    <!-- 멤버 프로필 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">👥 Member Profiles</div>
+      <div style="font-size:.78rem;color:#94a3b8;margin-bottom:14px;" data-i18n="connect.members.hint">Click to view individual profile pages</div>
+      <div id="member-profiles-area"><!-- JS 렌더링 --></div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+        <span style="font-size:1.1rem;color:var(--coral);font-weight:900;">?</span>
+        <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;" data-i18n="connect.faq.label">Frequently Asked Questions · FAQ</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+
+        <div class="faq-item" style="border-radius:10px;border:1px solid #e2e8f0;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;padding:14px 16px;background:#f8faff;border:none;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+            <span style="font-size:.82rem;font-weight:800;color:var(--navy);" data-i18n="faq.q1">Q. Can anyone join the club?</span>
+            <span class="faq-arrow" style="font-size:.72rem;color:#94a3b8;transition:transform .2s;flex-shrink:0;margin-left:10px;">▼</span>
+          </button>
+          <div class="faq-body" style="display:none;padding:12px 16px 14px;font-size:.78rem;color:#475569;line-height:1.7;background:#fff;border-top:1px solid #f1f5f9;">
+            <span data-i18n="faq.a1">All Kew Primary School students are welcome! No experience needed — you can learn step by step from the beginner level.</span>
+          </div>
+        </div>
+
+        <div class="faq-item" style="border-radius:10px;border:1px solid #e2e8f0;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;padding:14px 16px;background:#f8faff;border:none;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+            <span style="font-size:.82rem;font-weight:800;color:var(--navy);" data-i18n="faq.q2">Q. How often and when do we practice?</span>
+            <span class="faq-arrow" style="font-size:.72rem;color:#94a3b8;transition:transform .2s;flex-shrink:0;margin-left:10px;">▼</span>
+          </button>
+          <div class="faq-body" style="display:none;padding:12px 16px 14px;font-size:.78rem;color:#475569;line-height:1.7;background:#fff;border-top:1px solid #f1f5f9;">
+            <span data-i18n="faq.a2">We practice 3 times a week (Mon, Wed, Fri) after school from 3:30–4:30pm at the school gym. Weekends are optional self-practice.</span>
+          </div>
+        </div>
+
+        <div class="faq-item" style="border-radius:10px;border:1px solid #e2e8f0;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;padding:14px 16px;background:#f8faff;border:none;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+            <span style="font-size:.82rem;font-weight:800;color:var(--navy);" data-i18n="faq.q3">Q. Do I need to bring my own jump rope?</span>
+            <span class="faq-arrow" style="font-size:.72rem;color:#94a3b8;transition:transform .2s;flex-shrink:0;margin-left:10px;">▼</span>
+          </button>
+          <div class="faq-body" style="display:none;padding:12px 16px 14px;font-size:.78rem;color:#475569;line-height:1.7;background:#fff;border-top:1px solid #f1f5f9;">
+            <span data-i18n="faq.a3">We provide basic jump ropes to start. However, having your own rope sized to your height will improve your training!</span>
+          </div>
+        </div>
+
+        <div class="faq-item" style="border-radius:10px;border:1px solid #e2e8f0;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;padding:14px 16px;background:#f8faff;border:none;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+            <span style="font-size:.82rem;font-weight:800;color:var(--navy);" data-i18n="faq.q4">Q. What happens when I finish the 90-day challenge?</span>
+            <span class="faq-arrow" style="font-size:.72rem;color:#94a3b8;transition:transform .2s;flex-shrink:0;margin-left:10px;">▼</span>
+          </button>
+          <div class="faq-body" style="display:none;padding:12px 16px 14px;font-size:.78rem;color:#475569;line-height:1.7;background:#fff;border-top:1px solid #f1f5f9;">
+            <span data-i18n="faq.a4">Complete all 90 days (30 each: Beginner, Intermediate, Advanced) and receive your completion certificate. Celebrate with your teammates! 🏆</span>
+          </div>
+        </div>
+
+        <div class="faq-item" style="border-radius:10px;border:1px solid #e2e8f0;overflow:hidden;">
+          <button onclick="toggleFaq(this)" style="width:100%;padding:14px 16px;background:#f8faff;border:none;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+            <span style="font-size:.82rem;font-weight:800;color:var(--navy);" data-i18n="faq.q5">Q. How do I use the app?</span>
+            <span class="faq-arrow" style="font-size:.72rem;color:#94a3b8;transition:transform .2s;flex-shrink:0;margin-left:10px;">▼</span>
+          </button>
+          <div class="faq-body" style="display:none;padding:12px 16px 14px;font-size:.78rem;color:#475569;line-height:1.7;background:#fff;border-top:1px solid #f1f5f9;">
+            <span data-i18n="faq.a5">Create an account, log in, and watch the daily training videos to earn your stamp. One chapter per day. Each stamp earns $5 coins for character items!</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: Gallery
+════════════════════════════════════════ -->
+<div id="page-gallery" style="display:none;min-height:100vh;background:#f8faff;padding-bottom:40px;">
+
+  <!-- 히어로 -->
+  <div class="hero-bg" style="padding:28px 20px 24px;color:#fff;text-align:center;">
+    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--goldf);margin-bottom:4px;" data-i18n="gallery.hero.tagline">Our Story</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;line-height:1.2;" data-i18n="gallery.hero.title">Gallery — Activity Log 📸</div>
+  </div>
+
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px;">
+
+    <!-- 업로드 배너 (관리자만 버튼 활성) -->
+    <div style="background:linear-gradient(135deg,var(--navy),#1565c0);border-radius:18px;padding:20px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <div>
+        <div style="font-size:.82rem;font-weight:900;color:#fff;margin-bottom:4px;" data-i18n="gallery.upload.title">📸 Club Activity Photos &amp; Videos</div>
+        <div style="font-size:.74rem;color:rgba(255,255,255,.7);" data-i18n="gallery.upload.desc">Club activity records uploaded by admin</div>
+      </div>
+      <div id="gallery-upload-btn-area">
+        <!-- JS에서 관리자일 때만 업로드 버튼 주입 -->
+      </div>
+    </div>
+
+    <!-- 갤러리 동적 그리드 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">📷 Club Gallery</div>
+      <div style="font-size:.74rem;color:#94a3b8;margin-bottom:4px;" data-i18n="gallery.section.hint">Official club photos &amp; videos uploaded by admin</div>
+      <div id="gallery-dynamic-grid"><!-- JS 렌더링 --></div>
+    </div>
+
+    <!-- 성과 타임라인 -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;">🏅 Achievement Timeline</div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#e8a800);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem;">🚀</div>
+          <div style="flex:1;padding:10px 14px;background:#fffbeb;border-radius:12px;border:1px solid #fde68a;">
+            <div style="font-size:.8rem;font-weight:900;color:var(--navy);" data-i18n="gallery.founded">Club Founded</div>
+            <div style="font-size:.72rem;color:#92400e;margin-top:2px;" data-i18n="gallery.founded_desc">KPS Jump Rope Club launched, led by Sihyung Lee!</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;opacity:.4;">
+          <div style="width:36px;height:36px;border-radius:50%;background:#e2e8f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem;">🎯</div>
+          <div style="flex:1;padding:10px 14px;background:#f8faff;border-radius:12px;border:1.5px dashed #e2e8f0;">
+            <div style="font-size:.8rem;font-weight:700;color:#94a3b8;" data-i18n="gallery.milestone">First Milestone</div>
+            <div style="font-size:.72rem;color:#cbd5e1;margin-top:2px;" data-i18n="gallery.milestone_desc">Our story, coming soon</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;opacity:.25;">
+          <div style="width:36px;height:36px;border-radius:50%;background:#e2e8f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem;">🏆</div>
+          <div style="flex:1;padding:10px 14px;background:#f8faff;border-radius:12px;border:1.5px dashed #e2e8f0;">
+            <div style="font-size:.8rem;font-weight:700;color:#94a3b8;" data-i18n="gallery.future">Future Records</div>
+            <div style="font-size:.72rem;color:#cbd5e1;margin-top:2px;" data-i18n="gallery.future_desc">Chapters we will write together</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: Stage (Grand Showcase)
+════════════════════════════════════════ -->
+<div id="page-stage" style="display:none;min-height:100vh;background:#f0f0f8;padding-bottom:48px;">
+
+  <!-- 드라마틱 히어로 -->
+  <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,#08081a 0%,#0d0d28 45%,#180a2e 100%);padding:48px 20px 40px;text-align:center;">
+
+    <!-- 별 배경 (정적 SVG) -->
+    <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="8%"  cy="18%" r="1.2" fill="rgba(255,255,255,.6)"/>
+      <circle cx="18%" cy="72%" r=".8"  fill="rgba(255,255,255,.4)"/>
+      <circle cx="28%" cy="35%" r="1.5" fill="rgba(255,255,255,.5)"/>
+      <circle cx="38%" cy="88%" r=".9"  fill="rgba(255,255,255,.35)"/>
+      <circle cx="50%" cy="12%" r="1.1" fill="rgba(255,255,255,.7)"/>
+      <circle cx="62%" cy="60%" r=".7"  fill="rgba(255,255,255,.45)"/>
+      <circle cx="72%" cy="25%" r="1.3" fill="rgba(255,255,255,.55)"/>
+      <circle cx="82%" cy="80%" r=".9"  fill="rgba(255,255,255,.4)"/>
+      <circle cx="90%" cy="42%" r="1.4" fill="rgba(255,255,255,.5)"/>
+      <circle cx="95%" cy="15%" r=".8"  fill="rgba(255,255,255,.6)"/>
+      <circle cx="14%" cy="54%" r=".6"  fill="rgba(201,162,39,.5)"/>
+      <circle cx="44%" cy="78%" r=".7"  fill="rgba(201,162,39,.4)"/>
+      <circle cx="76%" cy="10%" r=".8"  fill="rgba(201,162,39,.5)"/>
+      <circle cx="88%" cy="65%" r=".6"  fill="rgba(201,162,39,.4)"/>
+      <!-- 스포트라이트 -->
+      <ellipse cx="50%" cy="0%" rx="45%" ry="55%" fill="url(#spotlight)" opacity=".18"/>
+      <defs>
+        <radialGradient id="spotlight" cx="50%" cy="0%" r="100%">
+          <stop offset="0%" stop-color="#c9a227"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </radialGradient>
+      </defs>
+    </svg>
+
+    <div style="position:relative;z-index:1;">
+      <div style="font-size:.62rem;font-weight:700;color:rgba(201,162,39,.8);letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;">✦ Kew Primary School · Jump Rope Club ✦</div>
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,3.2rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:6px;">Grand</div>
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,3.2rem);font-weight:700;line-height:1.1;color:var(--gold);margin-bottom:16px;">Showcase</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:20px;line-height:1.7;" data-i18n="stage.hero.desc">A special stage only for<br>those who complete the full training</div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.35);border-radius:20px;padding:8px 18px;">
+        <span style="font-size:.74rem;font-weight:900;color:var(--gold);" data-i18n="stage.hero.badge">🏆 90-Day Challenge · Selected Cast · Live Performance</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:680px;margin:0 auto;padding:22px 16px;">
+    <div id="showcase-dynamic"><!-- JS 렌더링 --></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     PAGE: Wellness
+════════════════════════════════════════ -->
+<div id="page-wellness" style="display:none;min-height:100vh;background:#f8faff;padding-bottom:40px;">
+
+  <!-- 히어로 -->
+  <div class="hero-bg" style="padding:28px 20px 24px;color:#fff;text-align:center;">
+    <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--goldf);margin-bottom:4px;" data-i18n="well.hero.tagline">Small but mighty exercise</div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;line-height:1.2;" data-i18n="well.hero.title">Everything About Jump Rope 🏃‍♂️</div>
+    <div style="font-size:.78rem;opacity:.75;margin-top:8px;" data-i18n="well.hero.sub">History · Health Benefits · Safety Rules</div>
+  </div>
+
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px;">
+
+    <!-- ── 섹션 1: 역사 ── -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">1. History</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:14px;" data-i18n="well.hist.title">History of Jump Rope</h3>
+
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <!-- origin -->
+        <div style="display:flex;gap:14px;padding-bottom:18px;position:relative;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#fef9ec,#fde68a);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:.9rem;z-index:1;">🏺</div>
+            <div style="width:2px;flex:1;background:#e2e8f0;margin-top:4px;"></div>
+          </div>
+          <div style="padding-top:6px;">
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);margin-bottom:4px;" data-i18n="well.hist.origin">Origins &amp; Beginnings</div>
+            <div style="font-size:.78rem;color:#475569;line-height:1.7;" data-i18n="well.hist.origin_desc">While the exact origin is unclear, it is widely believed to have roots in <strong>ancient Egypt and China</strong>, where people played with ropes and vines.</div>
+          </div>
+        </div>
+        <!-- play to sport -->
+        <div style="display:flex;gap:14px;padding-bottom:18px;position:relative;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#eef2ff,#c7d2fe);border:2px solid #818cf8;display:flex;align-items:center;justify-content:center;font-size:.9rem;z-index:1;">⛵</div>
+            <div style="width:2px;flex:1;background:#e2e8f0;margin-top:4px;"></div>
+          </div>
+          <div style="padding-top:6px;">
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);margin-bottom:4px;" data-i18n="well.hist.sport">From Play to Sport</div>
+            <div style="font-size:.78rem;color:#475569;line-height:1.7;" data-i18n="well.hist.sport_desc"><strong>17th-century Dutch settlers</strong> brought it to America, where it became a beloved children's yard game.</div>
+          </div>
+        </div>
+        <!-- modern -->
+        <div style="display:flex;gap:14px;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f0fdf4,#bbf7d0);border:2px solid #4ade80;display:flex;align-items:center;justify-content:center;font-size:.9rem;">🏆</div>
+          </div>
+          <div style="padding-top:6px;">
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);margin-bottom:4px;" data-i18n="well.hist.modern">Jump Rope Today</div>
+            <div style="font-size:.78rem;color:#475569;line-height:1.7;" data-i18n="well.hist.modern_desc">Since the <strong>20th century</strong>, it has been a staple in boxing training, and today it is a recognised sport with <strong>world championships</strong> and freestyle music routines.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 섹션 2: 4대 효능 ── -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">2. Benefits</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:14px;" data-i18n="well.ben.title">4 Key Benefits of Jump Rope</h3>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px;background:#fff7ed;border-radius:14px;border-left:4px solid #fb923c;">
+          <span style="font-size:1.4rem;flex-shrink:0;">💥</span>
+          <div>
+            <div style="font-size:.84rem;font-weight:900;color:#9a3412;margin-bottom:3px;" data-i18n="well.ben1.title">High-Efficiency Calorie Burn</div>
+            <div style="font-size:.76rem;color:#7c2d12;line-height:1.6;" data-i18n="well.ben1.desc">Burns more calories per minute than running — great for weight management and preventing childhood obesity. <strong>(~300–400 kcal per 30 min)</strong></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px;background:#fdf2f8;border-radius:14px;border-left:4px solid #e879f9;">
+          <span style="font-size:1.4rem;flex-shrink:0;">👧</span>
+          <div>
+            <div style="font-size:.84rem;font-weight:900;color:#701a75;margin-bottom:3px;" data-i18n="well.ben2.title">Prevents Early Puberty</div>
+            <div style="font-size:.76rem;color:#581c87;line-height:1.6;" data-i18n="well.ben2.desc">Reduces excess body fat that disrupts hormone balance, helping prevent precocious puberty in children.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px;background:#f0fdf4;border-radius:14px;border-left:4px solid #4ade80;">
+          <span style="font-size:1.4rem;flex-shrink:0;">🦴</span>
+          <div>
+            <div style="font-size:.84rem;font-weight:900;color:#14532d;margin-bottom:3px;" data-i18n="well.ben3.title">Growth Plate Stimulation &amp; Bone Density</div>
+            <div style="font-size:.76rem;color:#166534;line-height:1.6;" data-i18n="well.ben3.desc">Jumping stimulates growth plates to support height growth in children and helps prevent osteoporosis in adults.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px;background:#eff6ff;border-radius:14px;border-left:4px solid #60a5fa;">
+          <span style="font-size:1.4rem;flex-shrink:0;">🫁</span>
+          <div>
+            <div style="font-size:.84rem;font-weight:900;color:#1e3a8a;margin-bottom:3px;" data-i18n="well.ben4.title">Cardio Endurance &amp; Coordination</div>
+            <div style="font-size:.76rem;color:#1e40af;line-height:1.6;" data-i18n="well.ben4.desc">Sustained aerobic effect strengthens heart and lungs, while timing hand and foot movements develops balance and body coordination.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 집중 탐구 박스: 성조숙증 ── -->
+    <div style="background:linear-gradient(135deg,#fdf4ff,#fae8ff);border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;border:1.5px solid #e879f9;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+        <span style="font-size:1.1rem;">🔍</span>
+        <div>
+          <div style="font-size:.72rem;font-weight:900;color:#a21caf;letter-spacing:.05em;text-transform:uppercase;" data-i18n="well.focus.label">Deep Dive</div>
+          <div style="font-size:.9rem;font-weight:900;color:#701a75;" data-i18n="well.focus.title">Why Jump Rope Helps Prevent Early Puberty!</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:rgba(255,255,255,.7);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;">
+          <span style="font-size:.9rem;flex-shrink:0;margin-top:1px;">🔬</span>
+          <div>
+            <div style="font-size:.8rem;font-weight:900;color:#701a75;margin-bottom:3px;" data-i18n="well.focus1.title">Fat Reduction &amp; Hormone Regulation</div>
+            <div style="font-size:.74rem;color:#6b21a8;line-height:1.6;" data-i18n="well.focus1.desc">Excess body fat causes fat cells to release leptin, which accelerates secondary sexual development. Jump rope is an excellent aerobic exercise that cuts this off at the source.</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.7);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;">
+          <span style="font-size:.9rem;flex-shrink:0;margin-top:1px;">📈</span>
+          <div>
+            <div style="font-size:.8rem;font-weight:900;color:#701a75;margin-bottom:3px;" data-i18n="well.focus2.title">Boosts Growth Hormone Production</div>
+            <div style="font-size:.74rem;color:#6b21a8;line-height:1.6;" data-i18n="well.focus2.desc">Stimulates growth plates to encourage healthy growth hormone release, preventing early plate closure that can limit height.</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.7);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;">
+          <span style="font-size:.9rem;flex-shrink:0;margin-top:1px;">😴</span>
+          <div>
+            <div style="font-size:.8rem;font-weight:900;color:#701a75;margin-bottom:3px;" data-i18n="well.focus3.title">Stress Relief</div>
+            <div style="font-size:.74rem;color:#6b21a8;line-height:1.6;" data-i18n="well.focus3.desc">Reduces endocrine disruption caused by academic stress. Fun jump rope sessions relieve stress, improve deep sleep, and stabilise the hormonal system.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 섹션 3: 안전 수칙 ── -->
+    <div style="background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">3. Safety Rules</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:14px;" data-i18n="well.safe.title">Injury Prevention Safety Rules</h3>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="background:#f0f5ff;border-radius:14px;padding:16px 14px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">👟</div>
+          <div style="font-size:.8rem;font-weight:900;color:var(--navy);margin-bottom:5px;" data-i18n="well.safe1.title">Cushioned Shoes Required</div>
+          <div style="font-size:.72rem;color:#475569;line-height:1.6;" data-i18n="well.safe1.desc">No bare feet or sandals! Wear running or sports shoes with proper shock absorption.</div>
+        </div>
+        <div style="background:#f0fdf4;border-radius:14px;padding:16px 14px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🧱</div>
+          <div style="font-size:.8rem;font-weight:900;color:var(--navy);margin-bottom:5px;" data-i18n="well.safe2.title">Avoid Hard Surfaces</div>
+          <div style="font-size:.72rem;color:#475569;line-height:1.6;" data-i18n="well.safe2.desc">Prefer grass, rubber mats, or wooden floors over concrete or asphalt.</div>
+        </div>
+        <div style="background:#fffbeb;border-radius:14px;padding:16px 14px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">📏</div>
+          <div style="font-size:.8rem;font-weight:900;color:var(--navy);margin-bottom:5px;" data-i18n="well.safe3.title">Adjust Rope Length</div>
+          <div style="font-size:.72rem;color:#475569;line-height:1.6;" data-i18n="well.safe3.desc">Stand on the centre of the rope — the handles should reach between your <strong>chest and navel</strong> for the right fit.</div>
+        </div>
+        <div style="background:#fef2f2;border-radius:14px;padding:16px 14px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🧘‍♂️</div>
+          <div style="font-size:.8rem;font-weight:900;color:var(--navy);margin-bottom:5px;" data-i18n="well.safe4.title">Stretch Before &amp; After</div>
+          <div style="font-size:.72rem;color:#475569;line-height:1.6;" data-i18n="well.safe4.desc">Warm up ankles, knees, wrists, and shoulders before you start — and don't skip the cool-down stretch!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 황금 팁 ── -->
+    <div style="background:linear-gradient(135deg,var(--navy),#1565c0);border-radius:18px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;">
+      <span style="font-size:1.4rem;flex-shrink:0;">💡</span>
+      <div>
+        <div style="font-size:.82rem;font-weight:900;color:var(--goldf);margin-bottom:6px;" data-i18n="well.tip.label">Quick Tip</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.9);line-height:1.7;" data-i18n="well.tip.desc">Don't jump too high — land lightly on the <strong style="color:var(--goldf);">balls of your feet (heels lifted)</strong> to protect your joints.<br>For healthy growth and early puberty prevention, aim for <strong style="color:var(--goldf);">at least 30 minutes a day, 3–5 times a week</strong> consistently!</div>
+      </div>
+    </div>
+
+    <!-- ── 섹션 4: 점핑 악보 기호표 ── -->
+    <div style="margin-top:20px;">
+      <div style="font-size:.72rem;font-weight:900;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">4. Score Symbol Guide</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:6px;">Music Jump Rope Score Symbols 🪢</h3>
+      <p style="font-size:.76rem;color:#64748b;line-height:1.7;margin-bottom:14px;">These symbols are used in KPS jump rope scores. <strong>Move symbols</strong> go inside the score cells; <strong>modifier symbols</strong> appear above cells to add direction, spin, or notation.</p>
+
+      <!-- GROUP 1: Jump Rope Moves -->
+      <div style="background:linear-gradient(90deg,#1a3560,#254a82);border-radius:12px;padding:10px 14px;margin-bottom:10px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;">
+        <span style="font-size:.88rem;font-weight:900;color:#c9a227;letter-spacing:.04em;">🦵 Jump Rope Moves</span>
+        <span style="font-size:.65rem;color:rgba(255,255,255,.6);">These go inside score cells — actual jump rope actions</span>
+      </div>
+
+      <!-- Basic Jumps -->
+      <div style="background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:10px;">
+        <div style="display:flex;align-items:center;gap:8px;border-left:4px solid #1a3560;padding-left:10px;margin-bottom:10px;">
+          <span style="font-size:1rem;">🦵</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);">Basic Jumps</div>
+            <div style="font-size:.65rem;color:#94a3b8;">Fundamental jumping patterns — learn these first!</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px;">
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#4CAF50;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">S</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Straight Jump</div><div style="font-size:.58rem;color:#94a3b8;">Both feet together</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#7CB342;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">AS</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Alternate Step</div><div style="font-size:.58rem;color:#94a3b8;">Left &amp; right alternate</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#2196F3;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">O</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Open Jump</div><div style="font-size:.58rem;color:#94a3b8;">Feet spread sideways</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#03A9F4;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">SL</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Single Leg</div><div style="font-size:.58rem;color:#94a3b8;">One foot only</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#009688;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">KN</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Knee Up</div><div style="font-size:.58rem;color:#94a3b8;">Knees to chest</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#FF7043;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">BK</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Back Kick</div><div style="font-size:.58rem;color:#94a3b8;">Kick feet backward</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#FF5722;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">FK</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Front Kick</div><div style="font-size:.58rem;color:#94a3b8;">Kick feet forward</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#5C6BC0;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">SK</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Skip</div><div style="font-size:.58rem;color:#94a3b8;">Rhythmic skip</div></div></div>
+        </div>
+      </div>
+
+      <!-- Techniques -->
+      <div style="background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:10px;">
+        <div style="display:flex;align-items:center;gap:8px;border-left:4px solid #1a3560;padding-left:10px;margin-bottom:10px;">
+          <span style="font-size:1rem;">🏆</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);">Techniques</div>
+            <div style="font-size:.65rem;color:#94a3b8;">Named jump rope skills and actions</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px;">
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#7B1FA2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">DS</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Double Swing</div><div style="font-size:.58rem;color:#94a3b8;">Two swing motions</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#BF360C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">RV</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Reverse</div><div style="font-size:.58rem;color:#94a3b8;">Reverse direction</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#0277BD;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">JJ</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Jumping Jack</div><div style="font-size:.58rem;color:#94a3b8;">Legs spread, arms up</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#00838F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">SR</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Side Run</div><div style="font-size:.58rem;color:#94a3b8;">Lateral running</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#2E7D32;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0;">가위</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Rock-Paper-Scissors</div><div style="font-size:.58rem;color:#94a3b8;">Foot pattern game</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#6A1B9A;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0;">½T</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Half Turn</div><div style="font-size:.58rem;color:#94a3b8;">Rope half rotation</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#1B5E20;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">SW</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Swing</div><div style="font-size:.58rem;color:#94a3b8;">Side rope swing</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#E65100;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0;">×2</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Repeat ×2</div><div style="font-size:.58rem;color:#94a3b8;">Do it twice</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#BF360C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0;">×3</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Repeat ×3</div><div style="font-size:.58rem;color:#94a3b8;">Do it three times</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#B71C1C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0;">×4</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Repeat ×4</div><div style="font-size:.58rem;color:#94a3b8;">Do it four times</div></div></div>
+        </div>
+      </div>
+
+      <!-- Arm & Rope Skills -->
+      <div style="background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:14px;">
+        <div style="display:flex;align-items:center;gap:8px;border-left:4px solid #1a3560;padding-left:10px;margin-bottom:10px;">
+          <span style="font-size:1rem;">🤲</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:900;color:var(--navy);">Arm &amp; Rope Skills</div>
+            <div style="font-size:.65rem;color:#94a3b8;">Advanced arm and rope control techniques</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px;">
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#F44336;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">C</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Cross</div><div style="font-size:.58rem;color:#94a3b8;">Arms cross in front</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#D32F2F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">BC</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Back Cross</div><div style="font-size:.58rem;color:#94a3b8;">Arms cross behind</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#E91E63;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">D</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Double Under</div><div style="font-size:.58rem;color:#94a3b8;">Rope spins twice</div></div></div>
+          <div style="display:flex;align-items:center;gap:6px;background:#f8f9ff;border:1px solid #dde3f5;border-radius:8px;padding:6px 8px;"><div style="width:28px;height:28px;border-radius:6px;background:#795548;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;">SC</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Side Cross</div><div style="font-size:.58rem;color:#94a3b8;">Side + cross combo</div></div></div>
+        </div>
+      </div>
+
+      <!-- GROUP 2: Modifiers -->
+      <div style="background:linear-gradient(90deg,#1a3560,#254a82);border-radius:12px;padding:10px 14px;margin-bottom:10px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;">
+        <span style="font-size:.88rem;font-weight:900;color:#c9a227;letter-spacing:.04em;">🔀 Movement &amp; State Modifiers</span>
+        <span style="font-size:.65rem;color:rgba(255,255,255,.6);">Overlay above cells — add direction, spin, or notation to any move</span>
+      </div>
+
+      <!-- Movement, Spin, Score, Music -->
+      <div style="background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:10px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+
+          <!-- Movement -->
+          <div>
+            <div style="display:flex;align-items:center;gap:6px;border-left:3px solid #00BCD4;padding-left:8px;margin-bottom:8px;">
+              <span style="font-size:.9rem;">🏃</span>
+              <div style="font-size:.76rem;font-weight:900;color:var(--navy);">Movement</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <div style="display:flex;align-items:center;gap:6px;background:#f0fdff;border:1px solid #b2ebf2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#00BCD4;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">↑</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Forward</div><div style="font-size:.58rem;color:#94a3b8;">Move forward</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#f0fdff;border:1px solid #b2ebf2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#607D8B;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">↓</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Backward</div><div style="font-size:.58rem;color:#94a3b8;">Move backward</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#f0fdff;border:1px solid #b2ebf2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#FF9800;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">↔</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Sideways</div><div style="font-size:.58rem;color:#94a3b8;">Move left or right</div></div></div>
+            </div>
+          </div>
+
+          <!-- Spins & Turns -->
+          <div>
+            <div style="display:flex;align-items:center;gap:6px;border-left:3px solid #9C27B0;padding-left:8px;margin-bottom:8px;">
+              <span style="font-size:.9rem;">💫</span>
+              <div style="font-size:.76rem;font-weight:900;color:var(--navy);">Spins &amp; Turns</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <div style="display:flex;align-items:center;gap:6px;background:#fdf4ff;border:1px solid #e1bee7;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#9C27B0;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900;flex-shrink:0;">T</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Half Turn 180°</div><div style="font-size:.58rem;color:#94a3b8;">Body rotates 180°</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#fdf4ff;border:1px solid #e1bee7;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#7B1FA2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900;flex-shrink:0;">T²</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Full Turn 360°</div><div style="font-size:.58rem;color:#94a3b8;">Full body rotation</div></div></div>
+            </div>
+          </div>
+
+          <!-- Score Marks -->
+          <div>
+            <div style="display:flex;align-items:center;gap:6px;border-left:3px solid #F57F17;padding-left:8px;margin-bottom:8px;">
+              <span style="font-size:.9rem;">🎶</span>
+              <div style="font-size:.76rem;font-weight:900;color:var(--navy);">Score Marks</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <div style="display:flex;align-items:center;gap:6px;background:#fffde7;border:1px solid #fff176;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#9E9E9E;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">─</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Rest</div><div style="font-size:.58rem;color:#94a3b8;">Skip this beat</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#fffde7;border:1px solid #fff176;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#F57F17;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">!</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Accent</div><div style="font-size:.58rem;color:#94a3b8;">Emphasize beat</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#fffde7;border:1px solid #fff176;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#FFB300;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:900;flex-shrink:0;">★</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Special</div><div style="font-size:.58rem;color:#94a3b8;">Custom move</div></div></div>
+            </div>
+          </div>
+
+          <!-- Music Symbols -->
+          <div>
+            <div style="display:flex;align-items:center;gap:6px;border-left:3px solid #C62828;padding-left:8px;margin-bottom:8px;">
+              <span style="font-size:.9rem;">🎵</span>
+              <div style="font-size:.76rem;font-weight:900;color:var(--navy);">Music Symbols</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <div style="display:flex;align-items:center;gap:6px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#C62828;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0;">◄)</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Left Symbol</div><div style="font-size:.58rem;color:#94a3b8;">Leftward direction</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#1565C0;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;flex-shrink:0;">►)</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Right Symbol</div><div style="font-size:.58rem;color:#94a3b8;">Rightward direction</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#4527A0;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">♩</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Quarter Note</div><div style="font-size:.58rem;color:#94a3b8;">One full beat</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#7B1FA2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">♪</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Eighth Note</div><div style="font-size:.58rem;color:#94a3b8;">Half a beat</div></div></div>
+              <div style="display:flex;align-items:center;gap:6px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:8px;padding:5px 8px;"><div style="width:26px;height:26px;border-radius:6px;background:#90A4AE;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;flex-shrink:0;">|</div><div><div style="font-size:.7rem;font-weight:900;color:#1a3560;">Bar Line</div><div style="font-size:.58rem;color:#94a3b8;">Divides measures</div></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     하단 고정 도장 버튼 (Achievement 전용)
+════════════════════════════════════════ -->
+<div id="stamp-bar" style="position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid #e2e8f0;padding:12px 18px;z-index:150;">
+  <div style="max-width:860px;margin:0 auto;">
+    <button id="main-stamp-btn" onclick="handleStampClick()" disabled
+      style="width:100%;padding:16px;border:none;border-radius:16px;font-size:.95rem;font-weight:900;font-family:inherit;cursor:not-allowed;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .25s;background:#e2e8f0;color:#94a3b8;">
+      <svg id="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span id="btn-text" data-i18n="stamp.initial">Watch the mission video and give it a try!</span>
+    </button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     성공 모달
+════════════════════════════════════════ -->
+<div id="success-modal" style="display:none;position:fixed;inset:0;background:rgba(15,32,64,.85);backdrop-filter:blur(6px);z-index:300;display:none;align-items:center;justify-content:center;padding:24px;">
+  <div style="background:#fff;border-radius:24px;padding:28px 24px;text-align:center;max-width:340px;width:100%;border:4px solid var(--gold);position:relative;overflow:hidden;" class="bounce-in">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,.07),transparent 60%);pointer-events:none;"></div>
+    <div style="width:80px;height:80px;background:#fef9ec;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;position:relative;border:2px solid var(--gold);">
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a4 4 0 0 1 4 4v5H8V6a4 4 0 0 1 4-4z"/></svg>
+      <div id="stamp-mark" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:2.5rem;opacity:0;" class="stamp-in">🔴</div>
+    </div>
+    <h3 id="modal-title" style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:8px;" data-i18n="modal.success">Wow, perfect success! 🎉</h3>
+    <p id="modal-desc" style="font-size:.88rem;color:#475569;line-height:1.7;margin-bottom:20px;"></p>
+    <button id="modal-action-btn" onclick="executeNextStep()"
+      style="width:100%;padding:14px;border:none;border-radius:14px;font-size:.92rem;font-weight:900;color:#fff;cursor:pointer;font-family:inherit;transition:background .2s;" data-i18n="modal.next_btn">
+      Next Challenge 🏃‍♂️
+    </button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     초기화 확인 모달
+════════════════════════════════════════ -->
+<div id="confirm-modal" style="display:none;position:fixed;inset:0;background:rgba(15,32,64,.8);backdrop-filter:blur(6px);z-index:300;align-items:center;justify-content:center;padding:24px;">
+  <div style="background:#fff;border-radius:22px;padding:28px 24px;text-align:center;max-width:320px;width:100%;border:2px solid #e2e8f0;">
+    <div style="font-size:2.5rem;margin-bottom:12px;">⚠️</div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:8px;" data-i18n="reset.title">Reset your stamp board?</h3>
+    <p style="font-size:.84rem;color:#64748b;margin-bottom:20px;line-height:1.6;" data-i18n="reset.desc">All progress will be cleared.<br>Press confirm if you want to start over from the beginning.</p>
+    <div style="display:flex;gap:10px;">
+      <button onclick="hideResetConfirm()" style="flex:1;padding:12px;background:var(--cream);border:1.5px solid #ddd;border-radius:12px;font-weight:700;font-family:inherit;cursor:pointer;color:var(--navy);font-size:.88rem;" data-i18n="reset.cancel">Cancel</button>
+      <button onclick="resetProgress()" style="flex:1;padding:12px;background:var(--coral);border:none;border-radius:12px;font-weight:700;font-family:inherit;cursor:pointer;color:#fff;font-size:.88rem;" data-i18n="reset.confirm">Reset</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── 페이지 전환 ──
+function switchPage(page){
+  localStorage.setItem('kps_last_page', page);
+  ['community','achievement','connect','gallery','wellness','stage'].forEach(p=>{
+    document.getElementById('page-'+p).style.display = p===page ? 'block' : 'none';
+    const tab = document.getElementById('tab-'+p);
+    if(p===page){
+      tab.style.color='#fff';
+      tab.style.borderBottomColor='var(--goldf)';
+    } else {
+      tab.style.color='rgba(255,255,255,.55)';
+      tab.style.borderBottomColor='transparent';
+    }
+  });
+  document.getElementById('stamp-bar').style.display = page==='achievement' ? 'block' : 'none';
+  if(page==='community'){
+    window.renderLeaderAvatar?.();
+    window.renderMemberGrid?.('community-member-grid');
+  }
+  if(page==='connect'){
+    window.renderWeeklySchedule?.();
+    window.renderScheduleCalendar?.();
+    window.renderMemberGrid?.('member-profiles-area');
+  }
+  if(page==='gallery'){
+    window.renderGalleryPage?.();
+    const uploadArea=document.getElementById('gallery-upload-btn-area');
+    if(uploadArea){
+      // isAdmin은 모듈에 있어서 window 통해 간접 체크
+      const adm=localStorage.getItem('kps_admin')==='1';
+      uploadArea.innerHTML=adm
+        ?`<button onclick="showAdminGalleryUpload()" style="background:var(--gold);color:var(--navy);border:none;border-radius:12px;padding:10px 16px;font-size:.78rem;font-weight:900;font-family:inherit;cursor:pointer;white-space:nowrap;flex-shrink:0;">+ 업로드</button>`
+        :`<span style="font-size:.7rem;color:rgba(255,255,255,.5);font-weight:700;">관리자 전용</span>`;
+    }
+  }
+  if(page==='stage'){
+    window.renderShowcasePage?.();
+  }
+  window.scrollTo(0,0);
+}
+
+// ── 문의 시스템 ──
+var _inquiryPage = 0;
+var INQUIRY_PER_PAGE = 5;
+
+function submitInquiry(){
+  const name   = document.getElementById('inquiry-name').value.trim();
+  const msg    = document.getElementById('inquiry-msg').value.trim();
+  const userId = localStorage.getItem('kps_current') || '';
+  const isAdm  = localStorage.getItem('kps_admin') === '1';
+  if(!name || !msg){ window.showToast?.('Please enter your name and message!'); return; }
+  if(userId && !isAdm){
+    const existing = JSON.parse(localStorage.getItem('kps_inquiries')||'[]');
+    const hasPending = existing.some(function(q){ return q.userId === userId && !q.reply; });
+    if(hasPending){
+      window.showToast?.('⏳ You already have a pending question — please wait for a reply before asking again!');
+      return;
+    }
+  }
+  const list = JSON.parse(localStorage.getItem('kps_inquiries')||'[]');
+  list.unshift({ id: Date.now(), name, userId, msg, date: new Date().toLocaleDateString('en-AU') });
+  localStorage.setItem('kps_inquiries', JSON.stringify(list));
+  document.getElementById('inquiry-name').value='';
+  document.getElementById('inquiry-msg').value='';
+  _inquiryPage = 0;
+  renderInquiries();
+  window.showToast?.('✅ Your message has been sent!');
+}
+
+function submitReply(id){
+  var text = (document.getElementById('reply-'+id)?.value||'').trim();
+  if(!text){ window.showToast?.('Please enter a reply!'); return; }
+  var list = JSON.parse(localStorage.getItem('kps_inquiries')||'[]');
+  var q = list.find(function(q){ return q.id === id; });
+  if(q){ q.reply = { text, date: new Date().toLocaleDateString('en-AU') }; }
+  localStorage.setItem('kps_inquiries', JSON.stringify(list));
+  renderInquiries();
+  window.showToast?.('✅ Reply sent!');
+}
+
+function deleteInquiry(id){
+  var list = JSON.parse(localStorage.getItem('kps_inquiries')||'[]');
+  localStorage.setItem('kps_inquiries', JSON.stringify(list.filter(function(q){ return q.id !== id; })));
+  renderInquiries();
+}
+
+function renderInquiries(){
+  var el = document.getElementById('inquiry-list');
+  if(!el) return;
+  var list   = JSON.parse(localStorage.getItem('kps_inquiries')||'[]');
+  var isAdm  = localStorage.getItem('kps_admin')==='1';
+  var userId = localStorage.getItem('kps_current')||'';
+  if(!list.length){ el.innerHTML='<div style="font-size:.78rem;color:#94a3b8;padding:8px 0;">No messages yet — be the first to ask!</div>'; return; }
+  var total  = Math.ceil(list.length / INQUIRY_PER_PAGE);
+  if(_inquiryPage >= total) _inquiryPage = total - 1;
+  var page   = list.slice(_inquiryPage * INQUIRY_PER_PAGE, (_inquiryPage+1) * INQUIRY_PER_PAGE);
+  el.innerHTML = page.map(function(q){
+    var borderColor = q.reply ? '#22c55e' : '#4f46e5';
+    var replyBlock = '';
+    if(q.reply){
+      replyBlock = '<div style="background:#f0fdf4;border-radius:8px;padding:10px 12px;border-left:3px solid #22c55e;margin-top:8px;"><div style="font-size:.7rem;font-weight:900;color:#166534;margin-bottom:4px;">✅ Reply · '+q.reply.date+'</div><div style="font-size:.76rem;color:#166534;line-height:1.5;">'+q.reply.text+'</div></div>';
+    } else if(isAdm){
+      replyBlock = '<div style="display:flex;gap:6px;margin-top:8px;"><input id="reply-'+q.id+'" type="text" placeholder="Enter reply..." style="flex:1;padding:8px 10px;border:1.5px solid #d1fae5;border-radius:8px;font-size:.76rem;font-family:inherit;outline:none;-webkit-user-select:text;user-select:text;" onfocus="this.style.borderColor=\'#22c55e\'" onblur="this.style.borderColor=\'#d1fae5\'"><button onclick="submitReply('+q.id+')" style="padding:8px 14px;background:#22c55e;color:#fff;border:none;border-radius:8px;font-size:.74rem;font-weight:900;cursor:pointer;font-family:inherit;white-space:nowrap;">Reply ✅</button></div>';
+    }
+    var deleteBtn = isAdm ? '<button onclick="deleteInquiry('+q.id+')" style="background:none;border:none;color:#cbd5e1;font-size:.7rem;cursor:pointer;padding:2px 4px;" title="Delete">✕</button>' : '';
+    return '<div style="padding:14px;background:#f8faff;border-radius:12px;border-left:3px solid '+borderColor+';"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:.76rem;font-weight:900;color:var(--navy);">'+q.name+'</span><div style="display:flex;gap:6px;align-items:center;"><span style="font-size:.68rem;color:#94a3b8;">'+q.date+'</span>'+deleteBtn+'</div></div><div style="font-size:.78rem;color:#475569;line-height:1.5;">'+(q.msg||'')+'</div>'+replyBlock+'</div>';
+  }).join('') + (total > 1 ? '<div style="display:flex;justify-content:center;align-items:center;gap:10px;margin-top:12px;"><button onclick="_inquiryPage=Math.max(0,_inquiryPage-1);renderInquiries()" '+ (_inquiryPage===0?'disabled':'')+' style="padding:6px 14px;border:1.5px solid #e2e8f0;border-radius:8px;background:#fff;font-size:.76rem;font-weight:700;cursor:pointer;font-family:inherit;'+(_inquiryPage===0?'opacity:.4;':'')+'">&larr; Prev</button><span style="font-size:.74rem;color:#64748b;font-weight:700;">'+(_inquiryPage+1)+' / '+total+'</span><button onclick="_inquiryPage=Math.min('+( total-1)+',_inquiryPage+1);renderInquiries()" '+(_inquiryPage===total-1?'disabled':'')+' style="padding:6px 14px;border:1.5px solid #e2e8f0;border-radius:8px;background:#fff;font-size:.76rem;font-weight:700;cursor:pointer;font-family:inherit;'+(_inquiryPage===total-1?'opacity:.4;':'')+'">Next &rarr;</button></div>' : '');
+}
+renderInquiries();
+</script>
+
+<script type="module" src="/src/main.js"></script>
+
+<!-- ════════════════════════════════════════
+     FAQ + FOOTER (전 페이지 공통)
+════════════════════════════════════════ -->
+<div id="global-footer-area">
+
+  <!-- 푸터 -->
+  <footer style="background:#1e293b;color:#fff;padding:40px 20px 24px;">
+    <div style="max-width:860px;margin:0 auto;">
+
+      <!-- 4컬럼 그리드 -->
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);">
+
+        <!-- 브랜드 -->
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <span style="font-size:1.4rem;">🪢</span>
+            <div>
+              <div style="font-size:.95rem;font-weight:900;">KPS Jump Rope Club</div>
+              <div style="font-size:.66rem;color:rgba(255,255,255,.45);letter-spacing:.05em;">KEW PRIMARY SCHOOL · MELBOURNE</div>
+            </div>
+          </div>
+          <div style="font-size:.75rem;color:var(--goldf);font-style:italic;margin-bottom:10px;" data-i18n="footer.tagline">Jump together, grow together 🌱</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.7;" data-i18n="footer.desc">From basics to advanced in a 90-day challenge,<br>building jump rope skills and teamwork together.</div>
+        </div>
+
+        <!-- 연락처 -->
+        <div>
+          <div style="font-size:.72rem;font-weight:900;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;" data-i18n="footer.contact">Contact</div>
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:.76rem;color:rgba(255,255,255,.75);">
+              <span>👑</span> <span data-i18n="footer.leader">Team Leader: Sihyung Lee</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:.76rem;color:rgba(255,255,255,.75);">
+              <span>🏫</span> Kew Primary School
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:.76rem;color:rgba(255,255,255,.75);">
+              <span>📍</span> Melbourne, VIC
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:.76rem;color:rgba(255,255,255,.75);">
+              <span>⏰</span> <span id="footer-schedule-time">월·수·금 3:30 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 바로가기 -->
+        <div>
+          <div style="font-size:.72rem;font-weight:900;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;" data-i18n="footer.nav">Navigation</div>
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <button onclick="window.renderHomePage?.()" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;padding:0;transition:color .15s;" onmouseover="this.style.color='var(--goldf)'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Home</button>
+            <button onclick="switchPage('community')" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;padding:0;transition:color .15s;" onmouseover="this.style.color='var(--goldf)'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Community</button>
+            <button onclick="switchPage('achievement')" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;padding:0;transition:color .15s;" onmouseover="this.style.color='var(--goldf)'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Achievement</button>
+            <button onclick="switchPage('connect')" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;padding:0;transition:color .15s;" onmouseover="this.style.color='var(--goldf)'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Connect</button>
+            <button onclick="switchPage('gallery')" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;padding:0;transition:color .15s;" onmouseover="this.style.color='var(--goldf)'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Gallery</button>
+            <button onclick="switchPage('wellness')" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;padding:0;transition:color .15s;" onmouseover="this.style.color='var(--goldf)'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Wellness</button>
+            <button onclick="switchPage('stage')" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:.76rem;cursor:pointer;font-family:inherit;text-align:left;padding:0;transition:color .15s;" onmouseover="this.style.color='var(--goldf)'" onmouseout="this.style.color='rgba(255,255,255,.7)'">Stage</button>
+          </div>
+        </div>
+
+        <!-- 위치 -->
+        <div>
+          <div style="font-size:.72rem;font-weight:900;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;" data-i18n="footer.location">Location</div>
+          <div style="font-size:.76rem;color:rgba(255,255,255,.8);font-weight:700;margin-bottom:8px;">Kew Primary School</div>
+          <div style="font-size:.73rem;color:rgba(255,255,255,.55);line-height:1.8;">
+            Cotham Rd, Kew VIC 3101<br>
+            Melbourne, Australia<br>
+            <span style="color:rgba(255,255,255,.4);">─────────────</span><br>
+            <span id="footer-venue-info">🏃 School Gym (체육관)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 하단 저작권 -->
+      <div style="padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div style="font-size:.7rem;color:rgba(255,255,255,.3);">© 2026 KPS Jump Rope Club — Kew Primary School. All Rights Reserved.</div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <span style="font-size:.68rem;color:rgba(255,255,255,.25);">School Values:</span>
+          <span style="font-size:.68rem;color:rgba(255,255,255,.4);font-style:italic;">Community · Achievement · Resilience · Empathy</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function toggleFaq(btn){
+  const body = btn.nextElementSibling;
+  const arrow = btn.querySelector('.faq-arrow');
+  const isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+  arrow.style.color = isOpen ? '#94a3b8' : 'var(--navy)';
+}
+</script>
+</body>
+</html>
