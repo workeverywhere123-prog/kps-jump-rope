@@ -295,29 +295,29 @@ function renderGalleryGrid(){
 }
 
 export function showAdminGalleryUpload(){
-  if(!isAdmin()){ window.showToast?.(getLang()==='en'?'Admins only!':'관리자만 업로드할 수 있어요!'); return; }
+  if(!isAdmin()){ window.showToast?.('Admins only!'); return; }
   document.getElementById('gallery-upload-modal')?.remove();
   const modal=document.createElement('div');
   modal.id='gallery-upload-modal';
   modal.style.cssText='position:fixed;inset:0;z-index:29000;background:rgba(15,32,64,.8);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;font-family:inherit;';
   modal.innerHTML=`
     <div style="background:#fff;border-radius:20px;padding:28px 24px;width:100%;max-width:420px;">
-      <div style="font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:18px;">📤 갤러리 업로드 (관리자)</div>
+      <div style="font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:18px;">📤 Gallery Upload (Admin)</div>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <input id="gu-title" type="text" placeholder="제목 (예: 첫 번째 연습 현장)"
+        <input id="gu-title" type="text" placeholder="Title (e.g. Practice Session #1)"
           style="padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:inherit;font-size:.84rem;outline:none;-webkit-user-select:text;user-select:text;"
           onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='#e2e8f0'">
-        <textarea id="gu-desc" placeholder="설명 (선택 사항)"
+        <textarea id="gu-desc" placeholder="Description (optional)"
           style="padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:inherit;font-size:.84rem;resize:none;height:70px;outline:none;-webkit-user-select:text;user-select:text;"
           onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='#e2e8f0'"></textarea>
-        <input id="gu-url" type="text" placeholder="이미지 URL 또는 YouTube 링크"
+        <input id="gu-url" type="text" placeholder="Image URL or YouTube link"
           style="padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:inherit;font-size:.84rem;outline:none;-webkit-user-select:text;user-select:text;"
           onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='#e2e8f0'">
         <div style="display:flex;gap:8px;margin-top:6px;">
           <button onclick="document.getElementById('gallery-upload-modal').remove()"
-            style="flex:1;padding:12px;background:#f1f5f9;border:none;border-radius:10px;font-size:.84rem;font-weight:700;font-family:inherit;cursor:pointer;color:#64748b;">취소</button>
+            style="flex:1;padding:12px;background:#f1f5f9;border:none;border-radius:10px;font-size:.84rem;font-weight:700;font-family:inherit;cursor:pointer;color:#64748b;">Cancel</button>
           <button onclick="submitGalleryUpload()"
-            style="flex:2;padding:12px;background:linear-gradient(135deg,var(--navy),#1565c0);color:#fff;border:none;border-radius:10px;font-size:.84rem;font-weight:900;font-family:inherit;cursor:pointer;">업로드 완료</button>
+            style="flex:2;padding:12px;background:linear-gradient(135deg,var(--navy),#1565c0);color:#fff;border:none;border-radius:10px;font-size:.84rem;font-weight:900;font-family:inherit;cursor:pointer;">Upload</button>
         </div>
       </div>
     </div>`;
@@ -329,7 +329,7 @@ export function submitGalleryUpload(){
   const title=(document.getElementById('gu-title')?.value||'').trim();
   const desc=(document.getElementById('gu-desc')?.value||'').trim();
   const mediaUrl=(document.getElementById('gu-url')?.value||'').trim();
-  if(!title){ window.showToast?.('제목을 입력해주세요!'); return; }
+  if(!title){ window.showToast?.('Please enter a title!'); return; }
   const items=getGalleryItems();
   items.unshift({ id:Date.now(), title, desc, mediaUrl, authorId:S.currentUser, date:new Date().toLocaleDateString('ko-KR') });
   localStorage.setItem('kps_gallery_items', JSON.stringify(items));
@@ -563,15 +563,15 @@ export function saveDayEvent(dateStr){
   const type=_selectedDayType;
   const title=(document.getElementById('day-ev-title')?.value||'').trim();
   const note=(document.getElementById('day-ev-note')?.value||'').trim();
-  if(!type){ window.showToast?.('이벤트 종류를 선택해주세요!'); return; }
-  if(!title){ window.showToast?.('제목을 입력해주세요!'); return; }
+  if(!type){ window.showToast?.('Please select an event type!'); return; }
+  if(!title){ window.showToast?.('Please enter a title!'); return; }
   const events=getScheduleEvents();
   events[dateStr]={type,title,note};
   localStorage.setItem('kps_schedule_events',JSON.stringify(events));
   _selectedDayType=null;
   document.getElementById('day-editor-modal')?.remove();
   _drawScheduleCalendar();
-  window.showToast?.('✅ 일정이 저장됐어요!');
+  window.showToast?.('✅ Schedule saved!');
 }
 
 export function deleteDayEvent(dateStr){
@@ -581,7 +581,7 @@ export function deleteDayEvent(dateStr){
   localStorage.setItem('kps_schedule_events',JSON.stringify(events));
   document.getElementById('day-editor-modal')?.remove();
   _drawScheduleCalendar();
-  window.showToast?.('🗑️ 일정이 삭제됐어요.');
+  window.showToast?.('🗑️ Schedule deleted.');
 }
 
 // ══════════════════════════════════════════
@@ -831,7 +831,7 @@ export function renderShowcasePage(){
         </div>`
       :`<div style="aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,#0a0a1a,#1a0d2e);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
           <div style="font-size:2.8rem;">🎬</div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.45);font-weight:700;">${adm?'편집 버튼으로 영상을 추가하세요':t('showcase.video_pending')}</div>
+          <div style="font-size:.78rem;color:rgba(255,255,255,.45);font-weight:700;">${adm?'Use the edit button to add a video':t('showcase.video_pending')}</div>
         </div>`
     }
     ${data.song||data.artist?`
