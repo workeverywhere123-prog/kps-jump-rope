@@ -599,9 +599,12 @@ const _wsDefaults={
 let _wsCurrentTypes={};
 
 function getWeeklySchedule(){
-  const s=JSON.parse(localStorage.getItem('kps_weekly_schedule')||'null');
-  if(!s) return {days:{..._wsDefaults},venue:'School Gym',teacher:'Sihyung Lee'};
-  return s;
+  // 우선순위: 관리자 편집본 > 서버 schedule.json > 하드코딩 기본값
+  const admin = JSON.parse(localStorage.getItem('kps_weekly_schedule')||'null');
+  if(admin) return admin;
+  const server = JSON.parse(localStorage.getItem('kps_schedule_server')||'null');
+  if(server) return server;
+  return {days:{..._wsDefaults},venue:'School Gym',teacher:'Sihyung Lee'};
 }
 
 export function renderWeeklySchedule(){
@@ -748,11 +751,27 @@ export function saveWeeklySchedule(){
   sched.venue=(document.getElementById('ws-venue')?.value||'').trim();
   sched.teacher=(document.getElementById('ws-teacher')?.value||'').trim();
   localStorage.setItem('kps_weekly_schedule',JSON.stringify(sched));
+  // 서버 캐시도 같이 갱신 → 같은 기기의 모든 사용자가 새 스케줄을 봄
+  localStorage.setItem('kps_schedule_server',JSON.stringify(sched));
   _wsCurrentTypes={};
   document.getElementById('ws-editor-modal')?.remove();
   renderWeeklySchedule();
   renderFooterSchedule();
   window.showToast?.(t('sched.saved'));
+  // 영구 반영용 JSON 다운로드 제공
+  _offerScheduleDownload(sched);
+}
+
+function _offerScheduleDownload(sched){
+  // 관리자에게 schedule.json 업데이트용 파일 다운로드 토스트 제공
+  const json = JSON.stringify(sched, null, 2);
+  const blob = new Blob([json], {type:'application/json'});
+  const url  = URL.createObjectURL(blob);
+  const notice = document.createElement('div');
+  notice.style.cssText='position:fixed;bottom:90px;left:50%;transform:translateX(-50%);z-index:99999;background:#1a3560;color:#fff;padding:12px 18px;border-radius:14px;font-size:.78rem;font-weight:700;display:flex;align-items:center;gap:10px;box-shadow:0 4px 20px rgba(0,0,0,.35);max-width:320px;width:90%;';
+  notice.innerHTML=`<span>📥 영구 반영하려면 schedule.json 교체 후 배포하세요</span><a href="${url}" download="schedule.json" style="color:#c9a227;font-weight:900;white-space:nowrap;text-decoration:none;">다운로드</a>`;
+  document.body.appendChild(notice);
+  setTimeout(()=>{ notice.remove(); URL.revokeObjectURL(url); }, 8000);
 }
 
 export function renderFooterSchedule(){

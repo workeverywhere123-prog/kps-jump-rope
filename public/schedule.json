@@ -1,0 +1,12 @@
+{
+  "days": {
+    "mon":    { "label": "월", "labelEn": "Mon", "en": "Monday",    "type": "practice", "time": "3:30 – 4:30 PM", "note": "" },
+    "tue":    { "label": "화", "labelEn": "Tue", "en": "Tuesday",   "type": "rest",     "time": "",               "note": "" },
+    "wed":    { "label": "수", "labelEn": "Wed", "en": "Wednesday", "type": "practice", "time": "3:30 – 4:30 PM", "note": "" },
+    "thu":    { "label": "목", "labelEn": "Thu", "en": "Thursday",  "type": "rest",     "time": "",               "note": "" },
+    "fri":    { "label": "금", "labelEn": "Fri", "en": "Friday",    "type": "practice", "time": "3:30 – 4:30 PM", "note": "" },
+    "sat_sun":{ "label": "토·일", "labelEn": "Sat-Sun", "en": "Weekend", "type": "free", "time": "", "note": "자율 연습 🏃", "noteEn": "Self Practice 🏃" }
+  },
+  "venue": "School Gym",
+  "teacher": "Sihyung Lee"
+}

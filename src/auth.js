@@ -527,7 +527,7 @@ export function renderUserBadge(){
   const realName = (getLang()==='en' && u?.nameEn) ? u.nameEn : (u?.name || '');
   container.innerHTML = `
     <div style="display:flex;align-items:center;gap:6px;">
-      <button onclick="showAvatarProfile()"
+      <button id="badge-avatar-btn" onclick="showAvatarProfile()"
         style="background:#f0f5ff;border:2.5px solid var(--gold);border-radius:12px;padding:2px;cursor:pointer;flex-shrink:0;width:46px;height:60px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12);">
         ${makeAvatarSVG(av,40,52)}
       </button>

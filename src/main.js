@@ -25,6 +25,17 @@ import { showAvatarCreator, showAvatarProfile, showShop,
          avBuy, avTryOn, avToggleEquip, avToggleEquipCreator, avToggleEquipProfile, avShopCat, getAvatar } from './avatar.js';
 import { applyI18n } from './i18n.js';
 
+// ── 서버 스케줄 초기 로드 (모든 기기에서 동일한 스케줄 표시) ──
+async function loadServerSchedule(){
+  try {
+    const res = await fetch('/schedule.json?v=' + Date.now());
+    if(!res.ok) return;
+    const data = await res.json();
+    // 서버 스케줄을 별도 키에 저장 (관리자 localStorage 편집이 없으면 이걸 사용)
+    localStorage.setItem('kps_schedule_server', JSON.stringify(data));
+  } catch(e) { /* 오프라인이거나 파일 없을 때 무시 */ }
+}
+
 // ── 앱 초기화 ──────────────────────────────
 function initApp(){
   document.getElementById('home-overlay')?.remove();
@@ -43,6 +54,12 @@ function initApp(){
   const lastPage = localStorage.getItem('kps_last_page') || 'achievement';
   window.switchPage?.(lastPage);
   applyI18n();
+  // 서버 스케줄 fetch (비동기 - 완료 후 Connect 페이지가 열려있으면 자동 갱신)
+  loadServerSchedule().then(()=>{
+    const ws = document.getElementById('weekly-schedule-area');
+    if(ws) window.renderWeeklySchedule?.();
+    window.renderFooterSchedule?.();
+  });
 }
 
 // ── 전역 함수 노출 ─────────────────────────
