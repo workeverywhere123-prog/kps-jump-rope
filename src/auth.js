@@ -22,11 +22,12 @@ export function getUsers(){ return JSON.parse(localStorage.getItem('kps_users')|
 
 export async function doLogin(id, pw){
   const users = getUsers();
-  if(!users[id]) return t('err.no_user');
+  const cleanId = id.toLowerCase();
+  if(!users[cleanId]) return t('err.no_user');
   const hash = await hashPw(pw);
-  if(hash !== users[id].hash) return t('err.wrong_pw');
-  S.currentUser = id;
-  localStorage.setItem('kps_auth_user', id);
+  if(hash !== users[cleanId].hash) return t('err.wrong_pw');
+  S.currentUser = cleanId;
+  localStorage.setItem('kps_auth_user', cleanId);
   return null;
 }
 
@@ -36,11 +37,12 @@ export async function doSignup(id, pw, pw2, name){
   if(pw.length < 6) return t('err.short_pw');
   if(pw !== pw2) return t('err.pw_mismatch');
   const users = getUsers();
-  if(users[id]) return t('err.id_taken');
-  users[id] = { hash: await hashPw(pw), isAdmin: false, name: name.trim() };
+  const cleanId = id.toLowerCase();
+  if(users[cleanId]) return t('err.id_taken');
+  users[cleanId] = { hash: await hashPw(pw), isAdmin: false, name: name.trim() };
   localStorage.setItem('kps_users', JSON.stringify(users));
-  S.currentUser = id;
-  localStorage.setItem('kps_auth_user', id);
+  S.currentUser = cleanId;
+  localStorage.setItem('kps_auth_user', cleanId);
   return null;
 }
 
@@ -182,13 +184,9 @@ export async function authLogin(){
   const msg = await doLogin(id, pw);
   btn.textContent=t('auth.login'); btn.disabled=false;
   if(msg){ err.textContent=msg; return; }
-  if(isAdminUser()){
-    S.adminMode=true;
-    localStorage.setItem('kps_admin','1');
-    // 작업모드 로그인 시 이전 테스트 아이템 초기화 (매번 깨끗하게 시작)
-    localStorage.removeItem(lsKey('inv'));
-    const avNow=getAvatar(); if(avNow){ avNow.equipped={}; localStorage.setItem(lsKey('avatar'),JSON.stringify(avNow)); }
-  }
+  // 항상 일반모드로 시작 (작업모드는 배지 탭으로 수동 전환)
+  S.adminMode = false;
+  localStorage.removeItem('kps_admin');
   document.getElementById('auth-overlay')?.remove();
   initUserState();
   renderUserBadge();
