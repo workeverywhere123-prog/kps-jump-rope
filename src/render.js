@@ -21,6 +21,18 @@ const PHASE_GRAD   = [
 ];
 const SKILL_COUNT  = [3, 3, 2]; // 초급/중급: 3기술, 고급: 2기술
 
+function renderGuideItems(text){
+  const items = text.split(/(?=[①②③④⑤⑥])/).filter(s => s.trim());
+  if(items.length <= 1) return `<p style="font-weight:700;letter-spacing:-.01em;">${text}</p>`;
+  return `<div style="display:flex;flex-direction:column;gap:5px;">${
+    items.map(item => {
+      const m = item.match(/^([①②③④⑤⑥])\s*([\s\S]*)/);
+      if(!m) return `<div style="font-weight:700;">${item.trim()}</div>`;
+      return `<div style="display:flex;align-items:flex-start;gap:7px;line-height:1.55;"><span style="flex-shrink:0;font-weight:900;color:#4f46e5;">${m[1]}</span><span style="font-weight:700;">${m[2].trim()}</span></div>`;
+    }).join('')
+  }</div>`;
+}
+
 function phaseDone(p){
   return (JSON.parse(localStorage.getItem(`kps_${S.currentUser}_p${p}_done`)||'[]')).length >= 30;
 }
@@ -110,7 +122,7 @@ export function renderSkills(){
           <svg width="13" height="13" viewBox="0 0 24 24" fill="#4f46e5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
           ${t('skill.how_to')}
         </div>
-        <p style="padding-left:19px;text-indent:-19px;font-weight:700;letter-spacing:-.01em;">${getLang()==='en'?(skill.guideEn||skill.guide):skill.guide}</p>
+        ${renderGuideItems(getLang()==='en'?(skill.guideEn||skill.guide):skill.guide)}
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
         <div style="display:flex;align-items:center;gap:9px;">
@@ -129,13 +141,13 @@ export function renderSkills(){
           }
         </div>
       </div>
-      <div style="margin-top:14px;background:#f8faff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;border:1.5px solid #e0e7ff;">
-        <div style="display:flex;align-items:center;gap:8px;">
+      <div style="margin-top:16px;background:#f8faff;border-radius:12px;padding:14px 16px;border:1.5px solid #e0e7ff;display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
           <span style="font-size:.8rem;color:#475569;font-weight:700;">${t('skill.practice')}</span>
-          <span id="timer-${idx}" style="font-size:1.1rem;font-weight:900;color:${timerVal<300?'#16a34a':'#4f46e5'};font-family:monospace;">${timerVal<=0?t('skill.timer_done'):fmt(timerVal)}</span>
+          <span id="timer-${idx}" style="font-size:1.25rem;font-weight:900;color:${timerVal<300?'#16a34a':'#4f46e5'};font-family:monospace;">${timerVal<=0?t('skill.timer_done'):fmt(timerVal)}</span>
         </div>
         <button id="tbtn-${idx}" onclick="startTimer(${idx})" ${watched?'':'disabled'}
-          style="font-size:.78rem;font-weight:800;padding:8px 14px;border-radius:10px;border:none;cursor:${watched?'pointer':'not-allowed'};font-family:inherit;background:${watched?accentColor:'#e2e8f0'};color:${watched?'#fff':'#94a3b8'};transition:all .2s;">
+          style="width:100%;font-size:.84rem;font-weight:800;padding:12px 14px;border-radius:10px;border:none;cursor:${watched?'pointer':'not-allowed'};font-family:inherit;background:${watched?accentColor:'#e2e8f0'};color:${watched?'#fff':'#94a3b8'};transition:all .2s;letter-spacing:.01em;">
           ${timerVal<=0?t('skill.timer_retry'):t('skill.timer_start')}
         </button>
       </div>
