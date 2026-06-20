@@ -71,7 +71,8 @@ body { font-family:'Noto Sans KR',sans-serif; background:#edf2f8; }
 button, [onclick] { touch-action: manipulation; }
 /* iOS 입력창 자동 줌인 방지 */
 input[type="text"], input[type="password"], textarea { font-size: max(16px, 1em); }
-/* 가로 스크롤 방지 */
+/* 가로 스크롤 방지 — html+body 모두 설정해야 iOS Safari에서 동작 */
+html { overflow-x: hidden; }
 body { overflow-x: hidden; max-width: 100vw; }
 
 /* ── iPhone safe area ── */
@@ -129,5 +130,23 @@ body { overflow-x: hidden; max-width: 100vw; }
   #page-stage > div:last-child {
     padding-left: 12px !important;
     padding-right: 12px !important;
+  }
+  /* 헤더 타이틀 텍스트 숨기기 — 로고만 표시 */
+  #header-title-main { display: none !important; }
+  /* 유저 배지 — 정보 컬럼 숨기기 (아바타 + 로그아웃만 표시) */
+  #badge-info-col { display: none !important; }
+  #badge-logout-btn { font-size: .62rem !important; padding: 4px 7px !important; }
+  /* 푸터 — 2컬럼으로 변환 */
+  #footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  /* 아주 작은 화면 — 푸터 1컬럼 */
+  #footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
   }
 }

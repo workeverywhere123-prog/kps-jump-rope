@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>KPS Jump Rope Club — Kew Primary School</title>
   <link rel="manifest" href="/manifest.json" />
   <link rel="icon" type="image/svg+xml" href="/logo.svg" />
@@ -41,7 +41,7 @@
       </svg>
       <div onclick="window.renderHomePage?.()" style="cursor:pointer;" title="홈으로 이동">
         <div id="header-title-sub" style="font-size:.62rem;color:#999;letter-spacing:.06em;text-transform:uppercase;">Kew Primary School · Melbourne</div>
-        <div style="font-size:.9rem;font-weight:900;color:var(--navy);line-height:1.2;white-space:nowrap;">
+        <div id="header-title-main" style="font-size:.9rem;font-weight:900;color:var(--navy);line-height:1.2;white-space:nowrap;">
           KPS <span style="color:var(--gold);" data-i18n="site.name">Jump Rope Club</span>
         </div>
       </div>
@@ -1005,7 +1005,7 @@ renderInquiries();
     <div style="max-width:860px;margin:0 auto;">
 
       <!-- 4컬럼 그리드 -->
-      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);">
+      <div id="footer-grid" style="display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);">
 
         <!-- 브랜드 -->
         <div>

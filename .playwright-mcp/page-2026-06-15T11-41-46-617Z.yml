@@ -1,0 +1,242 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e5] [cursor=pointer]:
+          - generic [ref=e9]: KEW PRIMARY SCHOOL
+          - generic [ref=e10]: K
+          - generic [ref=e12]: BE WORTHY
+          - generic [ref=e13]: ★
+          - generic [ref=e14]: ★
+        - generic [ref=e15]:
+          - generic [ref=e16]: Kew Primary School · Melbourne
+          - generic [ref=e17]: 줄넘기 팀 90일 챌린지
+      - generic [ref=e19]:
+        - generic [ref=e20]: 진행 현황
+        - generic [ref=e21]: 0 / 90일
+    - generic [ref=e22]:
+      - button "Community 팀 소개" [ref=e23] [cursor=pointer]:
+        - generic [ref=e24]: Community
+        - generic [ref=e25]: 팀 소개
+      - button "Achievement 훈련 & 도전" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: Achievement
+        - generic [ref=e28]: 훈련 & 도전
+      - button "Connect 일정 & 소통" [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]: Connect
+        - generic [ref=e31]: 일정 & 소통
+      - button "Gallery 활동 기록" [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]: Gallery
+        - generic [ref=e34]: 활동 기록
+      - button "Wellness 건강 가이드" [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]: Wellness
+        - generic [ref=e37]: 건강 가이드
+      - button "NEW Stage 시연 공연" [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: NEW
+        - generic [ref=e40]: Stage
+        - generic [ref=e41]: 시연 공연
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - generic [ref=e44]: 함께 뛰고, 함께 성장하는
+      - generic [ref=e45]: 줄넘기로 최고를 향해 🪢
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]: "0"
+          - generic [ref=e49]: 완료한 날
+        - generic [ref=e50]:
+          - generic [ref=e51]: Day 1
+          - generic [ref=e52]: 현재 도전
+        - generic [ref=e53]:
+          - generic [ref=e54]: 🔥 0
+          - generic [ref=e55]: 연속 일수
+    - generic [ref=e56]:
+      - generic [ref=e58]:
+        - generic [ref=e59]: 🏅 90일 대장정
+        - generic [ref=e60]: 0 / 90일 완료
+      - generic [ref=e62]:
+        - 'heading "📅 { Day 1 } 오늘의 도전!" [level=2] [ref=e63]'
+        - generic [ref=e64]: 🏅 초급 30일 → 중급 30일 → 고급 30일, 총 90일 도전!
+  - button "먼저 미션 영상을 보고 성공해 보세요!" [disabled] [ref=e69]:
+    - img [ref=e70]
+    - generic [ref=e73]: 먼저 미션 영상을 보고 성공해 보세요!
+  - contentinfo [ref=e75]:
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: 🪢
+            - generic [ref=e81]:
+              - generic [ref=e82]: KPS Jump Rope Club
+              - generic [ref=e83]: KEW PRIMARY SCHOOL · MELBOURNE
+          - generic [ref=e84]: 함께 뛰고, 함께 성장하는 🌱
+          - generic [ref=e85]:
+            - text: 90일 도전으로 기초부터 고급까지,
+            - text: 줄넘기 실력과 팀워크를 함께 키워요.
+        - generic [ref=e86]:
+          - generic [ref=e87]: 연락처
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e90]: 👑
+              - text: "팀 리더: 이시형"
+            - generic [ref=e91]:
+              - generic [ref=e92]: 🏫
+              - text: Kew Primary School
+            - generic [ref=e93]:
+              - generic [ref=e94]: 📍
+              - text: Melbourne, VIC
+            - generic [ref=e95]:
+              - generic [ref=e96]: ⏰
+              - generic [ref=e97]: 월·수·금 3:30 PM
+        - generic [ref=e98]:
+          - generic [ref=e99]: 바로가기
+          - generic [ref=e100]:
+            - button "Community" [ref=e101] [cursor=pointer]
+            - button "Achievement" [ref=e102] [cursor=pointer]
+            - button "Connect" [ref=e103] [cursor=pointer]
+            - button "Gallery" [ref=e104] [cursor=pointer]
+            - button "Wellness" [ref=e105] [cursor=pointer]
+        - generic [ref=e106]:
+          - generic [ref=e107]: 위치
+          - generic [ref=e108]: Kew Primary School
+          - generic [ref=e109]:
+            - text: Cotham Rd, Kew VIC 3101
+            - text: Melbourne, Australia
+            - text: ─────────────
+            - text: 🏃 School Gym (체육관)
+            - text: 🚊 Kew 트램 정류장 도보 5분
+            - text: 🚌 207번 버스 정류장 근처
+      - generic [ref=e110]:
+        - generic [ref=e111]: © 2026 KPS Jump Rope Club — Kew Primary School. All Rights Reserved.
+        - generic [ref=e112]:
+          - generic [ref=e113]: "School Values:"
+          - generic [ref=e114]: Community · Achievement · Resilience · Empathy
+  - generic [ref=e115]:
+    - navigation [ref=e116]:
+      - generic [ref=e117]:
+        - img [ref=e118]:
+          - generic [ref=e120]: K
+        - generic [ref=e121]: KPS Jump Rope Club
+      - button "로그인" [active] [ref=e122] [cursor=pointer]
+    - generic [ref=e123]:
+      - img
+      - generic [ref=e124]:
+        - img [ref=e126]:
+          - generic [ref=e130]: KEW PRIMARY SCHOOL
+          - generic [ref=e131]: K
+          - generic [ref=e133]: BE WORTHY
+          - generic [ref=e134]: ★
+          - generic [ref=e135]: ★
+        - generic [ref=e136]: ✦ Kew Primary School · Melbourne ✦
+        - heading "줄넘기 팀" [level=1] [ref=e137]
+        - heading "90일 챌린지" [level=2] [ref=e138]
+        - paragraph [ref=e140]:
+          - text: 기초부터 고급까지, 팀과 함께 성장하는
+          - strong [ref=e141]: Kew Primary School 줄넘기 클럽
+          - text: 에 오신 것을 환영합니다
+        - generic [ref=e142]:
+          - button "🏃 클럽 가입하기" [ref=e143] [cursor=pointer]
+          - button "로그인" [ref=e144] [cursor=pointer]
+        - generic [ref=e145]: ∨ 스크롤하여 더 보기
+    - generic [ref=e147]:
+      - generic [ref=e148]:
+        - generic [ref=e149]: 90일
+        - generic [ref=e150]: 도전 기간
+      - generic [ref=e151]:
+        - generic [ref=e152]: 3단계
+        - generic [ref=e153]: 초급·중급·고급
+      - generic [ref=e154]:
+        - generic [ref=e155]: 주 3회
+        - generic [ref=e156]: 체계적 훈련
+      - generic [ref=e157]:
+        - generic [ref=e158]: Grand
+        - generic [ref=e159]: Showcase
+    - generic [ref=e161]:
+      - generic [ref=e162]: About the Club
+      - heading "KPS 줄넘기 클럽이란?" [level=2] [ref=e163]
+      - paragraph [ref=e164]:
+        - text: 팀 리더
+        - strong [ref=e165]: 이시형
+        - text: 이 직접 창설하고 이끄는 Kew Primary School 줄넘기 클럽입니다.
+        - text: 단순한 운동을 넘어, 체계적인 훈련과 팀워크로 함께 성장하는 90일의 여정을 제공합니다.
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]: 🎯
+          - generic [ref=e169]: 기초 체력 향상
+          - generic [ref=e170]: 꾸준한 줄넘기 훈련으로 지구력과 협응력을 기릅니다.
+        - generic [ref=e171]:
+          - generic [ref=e172]: 🤝
+          - generic [ref=e173]: 팀워크 강화
+          - generic [ref=e174]: 함께 도전하고 서로 격려하는 팀 문화를 만들어갑니다.
+        - generic [ref=e175]:
+          - generic [ref=e176]: 🏆
+          - generic [ref=e177]: 성취의 기쁨
+          - generic [ref=e178]: 90일 완주로 스스로를 믿는 자신감을 키웁니다.
+        - generic [ref=e179]:
+          - generic [ref=e180]: ✨
+          - generic [ref=e181]: Grand Showcase
+          - generic [ref=e182]: 선발된 멤버들의 특별 시연 공연으로 마무리됩니다.
+    - generic [ref=e184]:
+      - generic [ref=e185]: The Journey
+      - heading "3단계 훈련 과정" [level=2] [ref=e186]
+      - generic [ref=e187]:
+        - generic [ref=e188]:
+          - generic [ref=e190]: 초급
+          - generic [ref=e191]:
+            - generic [ref=e192]: Day 1 – 30
+            - generic [ref=e193]: 기본 기술 습득
+            - generic [ref=e194]: 두 발 뛰기, 한 발 뛰기, 교차 뛰기 등 기초를 마스터하며 체력을 기릅니다.
+        - generic [ref=e195]:
+          - generic [ref=e197]: 중급
+          - generic [ref=e198]:
+            - generic [ref=e199]: Day 31 – 60
+            - generic [ref=e200]: 응용 기술 연습
+            - generic [ref=e201]: 이중 뛰기, 뒤로 뛰기, 속도 훈련으로 실력을 한 단계 높입니다.
+        - generic [ref=e202]:
+          - generic [ref=e204]: 고급
+          - generic [ref=e205]:
+            - generic [ref=e206]: Day 61 – 90
+            - generic [ref=e207]: 고급 기술 & 공연 준비
+            - generic [ref=e208]: 3중 뛰기, 공연 안무 등 최고 수준의 기술을 연습하며 Grand Showcase를 준비합니다.
+    - generic [ref=e210]:
+      - generic [ref=e211]: Team Leader
+      - heading "이끄는 사람" [level=2] [ref=e212]
+      - generic [ref=e213]:
+        - generic [ref=e214]: 👑 Team Leader
+        - generic [ref=e215]:
+          - generic [ref=e216]: 🏃
+          - generic [ref=e217]:
+            - generic [ref=e218]: 이시형
+            - generic [ref=e219]: Lee Sihyung · KPS Jump Rope Club 창설자
+            - generic [ref=e220]:
+              - generic [ref=e221]: 🪢 클럽 창설자
+              - generic [ref=e222]: ⚡ 90일 도전 중
+        - paragraph [ref=e223]: "\"우리 같이 줄넘기로 최고가 되자! 매일 조금씩, 함께라면 못할 게 없어요.\""
+    - generic [ref=e225]:
+      - generic [ref=e226]: 함께 하실 준비가 되셨나요?
+      - heading "지금 시작하세요" [level=2] [ref=e227]
+      - paragraph [ref=e228]:
+        - text: KPS 줄넘기 클럽에 합류하고
+        - text: 90일간의 특별한 여정을 함께해요
+      - generic [ref=e229]:
+        - button "🏃 지금 가입하기" [ref=e230] [cursor=pointer]
+        - button "기존 회원 로그인" [ref=e231] [cursor=pointer]
+    - generic [ref=e233]: © 2026 KPS Jump Rope Club — Kew Primary School, Melbourne. All Rights Reserved.
+  - generic [ref=e235]:
+    - generic [ref=e236]:
+      - img [ref=e237]:
+        - generic [ref=e241]: KEW PRIMARY SCHOOL
+        - generic [ref=e242]: K
+        - generic [ref=e244]: BE WORTHY
+        - generic [ref=e245]: ★
+        - generic [ref=e246]: ★
+      - generic [ref=e247]: 줄넘기 팀 30일 챌린지
+      - generic [ref=e248]: Kew Primary School · Melbourne
+    - generic [ref=e249]:
+      - generic [ref=e250]: 로그인
+      - generic [ref=e251]:
+        - generic [ref=e252]: 아이디
+        - textbox "아이디 입력" [ref=e253]
+      - generic [ref=e254]:
+        - generic [ref=e255]: 비밀번호
+        - textbox "비밀번호 입력" [ref=e256]
+      - button "로그인" [ref=e258] [cursor=pointer]
+      - button "계정이 없으신가요? 회원가입" [ref=e259] [cursor=pointer]

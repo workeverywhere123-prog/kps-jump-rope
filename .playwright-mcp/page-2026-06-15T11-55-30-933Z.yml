@@ -1,0 +1,211 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e5] [cursor=pointer]:
+          - generic [ref=e9]: KEW PRIMARY SCHOOL
+          - generic [ref=e10]: K
+          - generic [ref=e12]: BE WORTHY
+          - generic [ref=e13]: ★
+          - generic [ref=e14]: ★
+        - generic [ref=e15]:
+          - generic [ref=e16]: Kew Primary School · Melbourne
+          - generic [ref=e17]: 줄넘기 팀 90일 챌린지
+      - generic [ref=e18]:
+        - generic [ref=e20]:
+          - button [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+          - generic [ref=e55]:
+            - generic [ref=e56]: 👑 이시형
+            - generic [ref=e57]: "@kpsrope"
+            - generic [ref=e58]:
+              - generic [ref=e59]: $0
+              - button "상점" [ref=e60] [cursor=pointer]
+          - button "로그아웃" [ref=e61] [cursor=pointer]
+        - generic [ref=e62]:
+          - generic [ref=e63]: 진행 현황
+          - generic [ref=e64]: 0 / 90일
+    - generic [ref=e65]:
+      - button "Community 팀 소개" [ref=e66] [cursor=pointer]:
+        - generic [ref=e67]: Community
+        - generic [ref=e68]: 팀 소개
+      - button "Achievement 훈련 & 도전" [ref=e69] [cursor=pointer]:
+        - generic [ref=e70]: Achievement
+        - generic [ref=e71]: 훈련 & 도전
+      - button "Connect 일정 & 소통" [ref=e72] [cursor=pointer]:
+        - generic [ref=e73]: Connect
+        - generic [ref=e74]: 일정 & 소통
+      - button "Gallery 활동 기록" [ref=e75] [cursor=pointer]:
+        - generic [ref=e76]: Gallery
+        - generic [ref=e77]: 활동 기록
+      - button "Wellness 건강 가이드" [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]: Wellness
+        - generic [ref=e80]: 건강 가이드
+      - button "NEW Stage 시연 공연" [ref=e81] [cursor=pointer]:
+        - generic [ref=e82]: NEW
+        - generic [ref=e83]: Stage
+        - generic [ref=e84]: 시연 공연
+  - generic [ref=e85]:
+    - generic [ref=e86]:
+      - generic [ref=e87]: 함께 뛰고, 함께 성장하는
+      - generic [ref=e88]: 줄넘기로 최고를 향해 🪢
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - generic [ref=e91]: "0"
+          - generic [ref=e92]: 완료한 날
+        - generic [ref=e93]:
+          - generic [ref=e94]: Day 1
+          - generic [ref=e95]: 현재 도전
+        - generic [ref=e96]:
+          - generic [ref=e97]: 🔥 0
+          - generic [ref=e98]: 연속 일수
+    - generic [ref=e99]:
+      - generic [ref=e101]:
+        - generic [ref=e102]: 🏅 90일 대장정
+        - generic [ref=e103]: 0 / 90일 완료
+      - generic [ref=e105]:
+        - 'heading "📅 { Day 1 } 오늘의 도전!" [level=2] [ref=e106]'
+        - generic [ref=e107]: 🏅 초급 30일 → 중급 30일 → 고급 30일, 총 90일 도전!
+  - button "먼저 미션 영상을 보고 성공해 보세요!" [disabled] [ref=e112]:
+    - img [ref=e113]
+    - generic [ref=e116]: 먼저 미션 영상을 보고 성공해 보세요!
+  - contentinfo [ref=e118]:
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]: 🪢
+            - generic [ref=e124]:
+              - generic [ref=e125]: KPS Jump Rope Club
+              - generic [ref=e126]: KEW PRIMARY SCHOOL · MELBOURNE
+          - generic [ref=e127]: 함께 뛰고, 함께 성장하는 🌱
+          - generic [ref=e128]:
+            - text: 90일 도전으로 기초부터 고급까지,
+            - text: 줄넘기 실력과 팀워크를 함께 키워요.
+        - generic [ref=e129]:
+          - generic [ref=e130]: 연락처
+          - generic [ref=e131]:
+            - generic [ref=e132]:
+              - generic [ref=e133]: 👑
+              - text: "팀 리더: 이시형"
+            - generic [ref=e134]:
+              - generic [ref=e135]: 🏫
+              - text: Kew Primary School
+            - generic [ref=e136]:
+              - generic [ref=e137]: 📍
+              - text: Melbourne, VIC
+            - generic [ref=e138]:
+              - generic [ref=e139]: ⏰
+              - generic [ref=e140]: 월·수·금 3:30 PM
+        - generic [ref=e141]:
+          - generic [ref=e142]: 바로가기
+          - generic [ref=e143]:
+            - button "Community" [ref=e144] [cursor=pointer]
+            - button "Achievement" [ref=e145] [cursor=pointer]
+            - button "Connect" [ref=e146] [cursor=pointer]
+            - button "Gallery" [ref=e147] [cursor=pointer]
+            - button "Wellness" [ref=e148] [cursor=pointer]
+        - generic [ref=e149]:
+          - generic [ref=e150]: 위치
+          - generic [ref=e151]: Kew Primary School
+          - generic [ref=e152]:
+            - text: Cotham Rd, Kew VIC 3101
+            - text: Melbourne, Australia
+            - text: ─────────────
+            - text: 🏃 School Gym (체육관)
+            - text: 🚊 Kew 트램 정류장 도보 5분
+            - text: 🚌 207번 버스 정류장 근처
+      - generic [ref=e153]:
+        - generic [ref=e154]: © 2026 KPS Jump Rope Club — Kew Primary School. All Rights Reserved.
+        - generic [ref=e155]:
+          - generic [ref=e156]: "School Values:"
+          - generic [ref=e157]: Community · Achievement · Resilience · Empathy
+  - generic [ref=e159]:
+    - generic [ref=e160]:
+      - generic [ref=e161]: 나만의 캐릭터 만들기 🎨
+      - generic [ref=e162]: 나만의 동물 친구를 꾸며보세요!
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - generic [ref=e165]:
+          - img [ref=e167]
+          - generic [ref=e200]: 미리보기
+        - generic [ref=e201]:
+          - button "🎉 완성!" [ref=e202] [cursor=pointer]
+          - button "🛒 상점" [ref=e203] [cursor=pointer]
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - button "🐾 베이스" [ref=e206] [cursor=pointer]
+          - button "😊 얼굴" [ref=e207] [cursor=pointer]
+          - button "👕 의상" [ref=e208] [cursor=pointer]
+          - button "🌈 배경" [ref=e209] [cursor=pointer]
+        - generic [ref=e210]:
+          - generic [ref=e211]:
+            - generic [ref=e212]: 🐾 동물 선택
+            - generic [ref=e213]:
+              - button "🐻 곰돌이" [ref=e214] [cursor=pointer]:
+                - generic [ref=e215]: 🐻
+                - generic [ref=e216]: 곰돌이
+              - button "🐱 야옹이" [ref=e217] [cursor=pointer]:
+                - generic [ref=e218]: 🐱
+                - generic [ref=e219]: 야옹이
+              - button "🐰 토끼" [ref=e220] [cursor=pointer]:
+                - generic [ref=e221]: 🐰
+                - generic [ref=e222]: 토끼
+              - button "🦊 여우" [ref=e223] [cursor=pointer]:
+                - generic [ref=e224]: 🦊
+                - generic [ref=e225]: 여우
+              - button "🐷 꿀꿀이" [ref=e226] [cursor=pointer]:
+                - generic [ref=e227]: 🐷
+                - generic [ref=e228]: 꿀꿀이
+              - button "🐶 강아지" [ref=e229] [cursor=pointer]:
+                - generic [ref=e230]: 🐶
+                - generic [ref=e231]: 강아지
+              - button "🐨 코알라" [ref=e232] [cursor=pointer]:
+                - generic [ref=e233]: 🐨
+                - generic [ref=e234]: 코알라
+              - button "🐼 판다" [ref=e235] [cursor=pointer]:
+                - generic [ref=e236]: 🐼
+                - generic [ref=e237]: 판다
+              - button "🦁 사자" [ref=e238] [cursor=pointer]:
+                - generic [ref=e239]: 🦁
+                - generic [ref=e240]: 사자
+              - button "🐯 호랑이" [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: 🐯
+                - generic [ref=e243]: 호랑이
+              - button "🐹 햄스터" [ref=e244] [cursor=pointer]:
+                - generic [ref=e245]: 🐹
+                - generic [ref=e246]: 햄스터
+              - button "🐸 개구리" [ref=e247] [cursor=pointer]:
+                - generic [ref=e248]: 🐸
+                - generic [ref=e249]: 개구리
+              - button "🐥 오리" [ref=e250] [cursor=pointer]:
+                - generic [ref=e251]: 🐥
+                - generic [ref=e252]: 오리
+              - button "🐲 드래곤" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]: 🐲
+                - generic [ref=e255]: 드래곤
+              - button "🐺 늑대" [ref=e256] [cursor=pointer]:
+                - generic [ref=e257]: 🐺
+                - generic [ref=e258]: 늑대
+              - button "🐣 병아리" [ref=e259] [cursor=pointer]:
+                - generic [ref=e260]: 🐣
+                - generic [ref=e261]: 병아리
+          - generic [ref=e262]:
+            - generic [ref=e263]: 🎨 털/피부 색상
+            - generic [ref=e264]:
+              - button "갈색" [ref=e265] [cursor=pointer]
+              - button "베이지" [ref=e266] [cursor=pointer]
+              - button "회색" [ref=e267] [cursor=pointer]
+              - button "흰색" [ref=e268] [cursor=pointer]
+              - button "주황" [ref=e269] [cursor=pointer]
+              - button "핑크" [ref=e270] [cursor=pointer]
+              - button "파랑" [ref=e271] [cursor=pointer]
+              - button "민트" [ref=e272] [cursor=pointer]
+              - button "보라" [ref=e273] [cursor=pointer]
+              - button "노랑" [ref=e274] [cursor=pointer]
+              - button "검정" [ref=e275] [cursor=pointer]
+              - button "빨강" [ref=e276] [cursor=pointer]
+              - button "라임" [ref=e277] [cursor=pointer]
+              - button "하늘" [ref=e278] [cursor=pointer]
+              - button "청록" [ref=e279] [cursor=pointer]
+              - button "라벤더" [ref=e280] [cursor=pointer]

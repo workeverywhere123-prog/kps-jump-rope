@@ -526,12 +526,12 @@ export function renderUserBadge(){
   const u = users[S.currentUser];
   const realName = (getLang()==='en' && u?.nameEn) ? u.nameEn : (u?.name || '');
   container.innerHTML = `
-    <div style="display:flex;align-items:center;gap:8px;">
+    <div style="display:flex;align-items:center;gap:6px;">
       <button onclick="showAvatarProfile()"
         style="background:#f0f5ff;border:2.5px solid var(--gold);border-radius:12px;padding:2px;cursor:pointer;flex-shrink:0;width:46px;height:60px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12);">
         ${makeAvatarSVG(av,40,52)}
       </button>
-      <div>
+      <div id="badge-info-col">
         ${realName ? `<div style="font-size:.78rem;font-weight:900;color:${isAdminUser()?'#7c3aed':'var(--navy)'};">${isAdminUser()?'👑 ':''}${realName}</div>` : ''}
         <div style="font-size:${realName?'.65rem':'.72rem'};font-weight:${realName?'600':'900'};color:${realName?'#94a3b8':isAdminUser()?'#7c3aed':'var(--navy)'};">${realName?'@':''}${S.currentUser}</div>
         <div style="display:flex;align-items:center;gap:5px;margin-top:2px;">
@@ -539,8 +539,8 @@ export function renderUserBadge(){
           <button onclick="showShop()" style="font-size:.62rem;font-weight:800;padding:2px 7px;border-radius:7px;border:1.5px solid var(--gold);background:#fef9ec;color:#a07c10;cursor:pointer;font-family:inherit;">${t('badge.shop')}</button>
         </div>
       </div>
-      <button onclick="doLogout()"
-        style="background:#f1f5f9;border:1.5px solid #ddd;color:#64748b;border-radius:9px;padding:6px 10px;font-size:.72rem;font-weight:700;cursor:pointer;font-family:inherit;"
+      <button id="badge-logout-btn" onclick="doLogout()"
+        style="background:#f1f5f9;border:1.5px solid #ddd;color:#64748b;border-radius:9px;padding:6px 10px;font-size:.72rem;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;"
         onmouseover="this.style.background='#fee2e2';this.style.color='#dc2626'"
         onmouseout="this.style.background='#f1f5f9';this.style.color='#64748b'">
         ${t('badge.logout')}

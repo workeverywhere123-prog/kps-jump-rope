@@ -1,0 +1,246 @@
+- generic [ref=e1]:
+  - generic [ref=e84]:
+    - generic [ref=e86]: 🔧 작업 모드
+    - generic [ref=e87]:
+      - generic [ref=e88]: "바로가기:"
+      - button "1" [ref=e89] [cursor=pointer]
+      - button "2" [ref=e90] [cursor=pointer]
+      - button "3" [ref=e91] [cursor=pointer]
+      - button "4" [ref=e92] [cursor=pointer]
+      - button "5" [ref=e93] [cursor=pointer]
+      - button "6" [ref=e94] [cursor=pointer]
+      - button "7" [ref=e95] [cursor=pointer]
+      - button "10" [ref=e96] [cursor=pointer]
+      - button "15" [ref=e97] [cursor=pointer]
+      - button "20" [ref=e98] [cursor=pointer]
+      - button "25" [ref=e99] [cursor=pointer]
+      - button "30" [ref=e100] [cursor=pointer]
+    - generic [ref=e101]:
+      - button "✅ 현재 날 완료" [ref=e102] [cursor=pointer]
+      - button "⚡ 전체 완료" [ref=e103] [cursor=pointer]
+      - button "✕ 모드 끄기" [ref=e104] [cursor=pointer]
+  - generic [ref=e2]: Community • Achievement • Resilience • Empathy
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6] [cursor=pointer]:
+          - generic [ref=e10]: KEW PRIMARY SCHOOL
+          - generic [ref=e11]: K
+          - generic [ref=e13]: BE WORTHY
+          - generic [ref=e14]: ★
+          - generic [ref=e15]: ★
+        - generic [ref=e16]:
+          - generic [ref=e17]: Kew Primary School · Melbourne
+          - generic [ref=e18]: 줄넘기 팀 90일 챌린지
+      - generic [ref=e19]:
+        - generic [ref=e106]:
+          - button [active] [ref=e107] [cursor=pointer]:
+            - img [ref=e108]
+          - generic [ref=e145]:
+            - generic [ref=e146]: 👑 kpsrope
+            - generic [ref=e147]:
+              - generic [ref=e148]: 💰 0
+              - button "상점" [ref=e149] [cursor=pointer]
+          - button "로그아웃" [ref=e150] [cursor=pointer]
+        - generic [ref=e20]:
+          - generic [ref=e21]: 진행 현황
+          - generic [ref=e22]: 0 / 90일
+        - button "초기화" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+          - text: 초기화
+  - generic [ref=e26]:
+    - generic [ref=e27]: 함께 뛰고, 함께 성장하는
+    - generic [ref=e28]: 줄넘기로 최고를 향해 🪢
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: "0"
+        - generic [ref=e32]: 완료한 날
+      - generic [ref=e33]:
+        - generic [ref=e34]: 초급 D-1
+        - generic [ref=e35]: 현재 도전
+      - generic [ref=e36]:
+        - generic [ref=e37]: 🔥 0
+        - generic [ref=e38]: 연속 일수
+  - generic [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: 🏅 90일 대장정
+        - generic [ref=e43]: 0 / 90일 완료
+      - generic [ref=e44]:
+        - button "D-1" [ref=e151] [cursor=pointer]:
+          - generic [ref=e152]: D-1
+        - button "D-2" [ref=e153] [cursor=pointer]:
+          - generic [ref=e154]: D-2
+        - button "D-3" [ref=e155] [cursor=pointer]:
+          - generic [ref=e156]: D-3
+        - button "D-4" [ref=e157] [cursor=pointer]:
+          - generic [ref=e158]: D-4
+        - button "D-5" [ref=e159] [cursor=pointer]:
+          - generic [ref=e160]: D-5
+        - button "D-6" [ref=e161] [cursor=pointer]:
+          - generic [ref=e162]: D-6
+        - button "D-7" [ref=e163] [cursor=pointer]:
+          - generic [ref=e164]: D-7
+        - button "D-8" [ref=e165] [cursor=pointer]:
+          - generic [ref=e166]: D-8
+        - button "D-9" [ref=e167] [cursor=pointer]:
+          - generic [ref=e168]: D-9
+        - button "D-10" [ref=e169] [cursor=pointer]:
+          - generic [ref=e170]: D-10
+        - button "D-11" [ref=e171] [cursor=pointer]:
+          - generic [ref=e172]: D-11
+        - button "D-12" [ref=e173] [cursor=pointer]:
+          - generic [ref=e174]: D-12
+        - button "D-13" [ref=e175] [cursor=pointer]:
+          - generic [ref=e176]: D-13
+        - button "D-14" [ref=e177] [cursor=pointer]:
+          - generic [ref=e178]: D-14
+        - button "D-15" [ref=e179] [cursor=pointer]:
+          - generic [ref=e180]: D-15
+        - button "D-16" [ref=e181] [cursor=pointer]:
+          - generic [ref=e182]: D-16
+        - button "D-17" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: D-17
+        - button "D-18" [ref=e185] [cursor=pointer]:
+          - generic [ref=e186]: D-18
+        - button "D-19" [ref=e187] [cursor=pointer]:
+          - generic [ref=e188]: D-19
+        - button "D-20" [ref=e189] [cursor=pointer]:
+          - generic [ref=e190]: D-20
+        - button "D-21" [ref=e191] [cursor=pointer]:
+          - generic [ref=e192]: D-21
+        - button "D-22" [ref=e193] [cursor=pointer]:
+          - generic [ref=e194]: D-22
+        - button "D-23" [ref=e195] [cursor=pointer]:
+          - generic [ref=e196]: D-23
+        - button "D-24" [ref=e197] [cursor=pointer]:
+          - generic [ref=e198]: D-24
+        - button "D-25" [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]: D-25
+        - button "D-26" [ref=e201] [cursor=pointer]:
+          - generic [ref=e202]: D-26
+        - button "D-27" [ref=e203] [cursor=pointer]:
+          - generic [ref=e204]: D-27
+        - button "D-28" [ref=e205] [cursor=pointer]:
+          - generic [ref=e206]: D-28
+        - button "D-29" [ref=e207] [cursor=pointer]:
+          - generic [ref=e208]: D-29
+        - button "D-30" [ref=e209] [cursor=pointer]:
+          - generic [ref=e210]: D-30
+    - generic [ref=e45]:
+      - 'heading "📅 { 초급 Day 1 } 오늘의 도전!" [level=2] [ref=e211]'
+      - generic [ref=e47]: 🏅 초급 30일 → 중급 30일 → 고급 30일, 총 90일 도전!
+    - generic [ref=e49]:
+      - generic [ref=e212]:
+        - generic [ref=e213]: 🟢 초급 ✦
+        - generic [ref=e214]: 0/30
+      - generic "클릭하여 페이즈 이동" [ref=e215] [cursor=pointer]:
+        - generic [ref=e216]: 🟡 중급 ↗
+        - generic [ref=e217]: 0/30
+      - generic "클릭하여 페이즈 이동" [ref=e218] [cursor=pointer]:
+        - generic [ref=e219]: 🔴 고급 ↗
+        - generic [ref=e220]: 0/30
+    - generic [ref=e221]:
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - generic [ref=e224]:
+            - img [ref=e225]
+            - text: 어떻게 하나요? (실전 요령)
+          - paragraph [ref=e227]: ① 무릎을 살짝 굽혀 충격을 흡수해요. ② 손목으로 줄을 가볍게 돌려요. ③ 발앞꿈치로 사뿐히 착지하세요!
+        - generic [ref=e228]:
+          - generic [ref=e229]:
+            - generic [ref=e230]: "1"
+            - generic [ref=e231]: 양발 모아 뛰기
+          - generic [ref=e232]: ▶ 시청 대기
+        - paragraph [ref=e233]: 가장 기본이 되는 필수 기술! 두 발을 모으고 리듬감을 익혀요.
+        - generic [ref=e234] [cursor=pointer]:
+          - img [ref=e235]
+          - generic [ref=e236]:
+            - button [ref=e237]:
+              - img [ref=e238]
+            - generic [ref=e240]:
+              - generic [ref=e241]: ▶ YouTube에서 보기
+              - generic [ref=e242]: 클릭 후 15초 체크됩니다
+        - generic [ref=e243]:
+          - generic [ref=e244]:
+            - generic [ref=e245]: 🎯 3분 실전 연습
+            - generic [ref=e246]: 3:00
+          - button "실전 시작!" [disabled] [ref=e247]
+      - generic [ref=e248]:
+        - generic [ref=e249]:
+          - generic [ref=e250]:
+            - img [ref=e251]
+            - text: 어떻게 하나요? (실전 요령)
+          - paragraph [ref=e253]: ① 제자리에서 조깅하듯 발을 번갈아 들어요. ② 다리를 뒤로 너무 높게 차지 마세요. ③ 가볍게 발을 통과시켜요.
+        - generic [ref=e254]:
+          - generic [ref=e255]:
+            - generic [ref=e256]: "2"
+            - generic [ref=e257]: 구보 뛰기
+          - generic [ref=e258]: ▶ 시청 대기
+        - paragraph [ref=e259]: 걷거나 조깅하는 박자로 왼발, 오른발을 엇갈려 부드럽게 넘어요.
+        - generic [ref=e260] [cursor=pointer]:
+          - img [ref=e261]
+          - generic [ref=e262]:
+            - button [ref=e263]:
+              - img [ref=e264]
+            - generic [ref=e266]:
+              - generic [ref=e267]: ▶ YouTube에서 보기
+              - generic [ref=e268]: 클릭 후 15초 체크됩니다
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - generic [ref=e271]: 🎯 3분 실전 연습
+            - generic [ref=e272]: 3:00
+          - button "실전 시작!" [disabled] [ref=e273]
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - generic [ref=e276]:
+            - img [ref=e277]
+            - text: 어떻게 하나요? (실전 요령)
+          - paragraph [ref=e279]: ① 첫 점프에 다리를 어깨너비로 벌려요. ② 두 번째 점프에 다시 모아요. ③ 줄과 스텝이 꼬이지 않게 호흡을 맞춰요.
+        - generic [ref=e280]:
+          - generic [ref=e281]:
+            - generic [ref=e282]: "3"
+            - generic [ref=e283]: 좌우 벌려 뛰기
+          - generic [ref=e284]: ▶ 시청 대기
+        - paragraph [ref=e285]: 줄 한 바퀴마다 벌렸다가 모으기를 반복해 재미를 더해요.
+        - generic [ref=e286] [cursor=pointer]:
+          - img [ref=e287]
+          - generic [ref=e288]:
+            - button [ref=e289]:
+              - img [ref=e290]
+            - generic [ref=e292]:
+              - generic [ref=e293]: ▶ YouTube에서 보기
+              - generic [ref=e294]: 클릭 후 15초 체크됩니다
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - generic [ref=e297]: 🎯 3분 실전 연습
+            - generic [ref=e298]: 3:00
+          - button "실전 시작!" [disabled] [ref=e299]
+  - button "초급 영상 3개를 모두 시청해야 도장을 받을 수 있어요!" [disabled] [ref=e300]:
+    - img [ref=e53]
+    - generic [ref=e56]: 초급 영상 3개를 모두 시청해야 도장을 받을 수 있어요!
+  - generic [ref=e5705]:
+    - generic [ref=e5706]:
+      - generic [ref=e5707]: 👤 내 프로필
+      - button "✕" [ref=e5708] [cursor=pointer]
+    - generic [ref=e5709]:
+      - img [ref=e5711]
+      - generic [ref=e5748]: kpsrope
+      - generic [ref=e5749]:
+        - generic [ref=e5750]:
+          - generic [ref=e5751]: "0"
+          - generic [ref=e5752]: 완료 일수
+        - generic [ref=e5753]:
+          - generic [ref=e5754]: 💰 0
+          - generic [ref=e5755]: 보유 코인
+        - generic [ref=e5756]:
+          - generic [ref=e5757]: 🔥 0
+          - generic [ref=e5758]: 연속 일수
+    - generic [ref=e5759]:
+      - generic [ref=e5760]: 🎒 내 아이템 (탭하면 장착/해제)
+      - generic [ref=e5762]:
+        - text: 아직 아이템이 없어요!
+        - text: 상점에서 구매해보세요 🛒
+    - generic [ref=e5763]:
+      - button "✏️ 아바타 수정" [ref=e5764] [cursor=pointer]
+      - button "🛒 상점 가기" [ref=e5765] [cursor=pointer]

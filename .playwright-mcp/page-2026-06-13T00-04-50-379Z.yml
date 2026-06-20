@@ -1,0 +1,483 @@
+- generic [ref=e1]:
+  - generic [ref=e84]:
+    - generic [ref=e86]: 🔧 작업 모드
+    - generic [ref=e87]:
+      - generic [ref=e88]: "바로가기:"
+      - button "1" [ref=e89] [cursor=pointer]
+      - button "2" [ref=e90] [cursor=pointer]
+      - button "3" [ref=e91] [cursor=pointer]
+      - button "4" [ref=e92] [cursor=pointer]
+      - button "5" [ref=e93] [cursor=pointer]
+      - button "6" [ref=e94] [cursor=pointer]
+      - button "7" [ref=e95] [cursor=pointer]
+      - button "10" [ref=e96] [cursor=pointer]
+      - button "15" [ref=e97] [cursor=pointer]
+      - button "20" [ref=e98] [cursor=pointer]
+      - button "25" [ref=e99] [cursor=pointer]
+      - button "30" [ref=e100] [cursor=pointer]
+    - generic [ref=e101]:
+      - button "✅ 현재 날 완료" [ref=e102] [cursor=pointer]
+      - button "⚡ 전체 완료" [ref=e103] [cursor=pointer]
+      - button "✕ 모드 끄기" [ref=e104] [cursor=pointer]
+  - generic [ref=e2]: Community • Achievement • Resilience • Empathy
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6] [cursor=pointer]:
+          - generic [ref=e10]: KEW PRIMARY SCHOOL
+          - generic [ref=e11]: K
+          - generic [ref=e13]: BE WORTHY
+          - generic [ref=e14]: ★
+          - generic [ref=e15]: ★
+        - generic [ref=e16]:
+          - generic [ref=e17]: Kew Primary School · Melbourne
+          - generic [ref=e18]: 줄넘기 팀 90일 챌린지
+      - generic [ref=e19]:
+        - generic [ref=e106]:
+          - button [ref=e107] [cursor=pointer]:
+            - img [ref=e108]
+          - generic [ref=e145]:
+            - generic [ref=e146]: 👑 kpsrope
+            - generic [ref=e147]:
+              - generic [ref=e148]: 💰 0
+              - button "상점" [active] [ref=e149] [cursor=pointer]
+          - button "로그아웃" [ref=e150] [cursor=pointer]
+        - generic [ref=e20]:
+          - generic [ref=e21]: 진행 현황
+          - generic [ref=e22]: 0 / 90일
+        - button "초기화" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+          - text: 초기화
+  - generic [ref=e26]:
+    - generic [ref=e27]: 함께 뛰고, 함께 성장하는
+    - generic [ref=e28]: 줄넘기로 최고를 향해 🪢
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: "0"
+        - generic [ref=e32]: 완료한 날
+      - generic [ref=e33]:
+        - generic [ref=e34]: 초급 D-1
+        - generic [ref=e35]: 현재 도전
+      - generic [ref=e36]:
+        - generic [ref=e37]: 🔥 0
+        - generic [ref=e38]: 연속 일수
+  - generic [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: 🏅 90일 대장정
+        - generic [ref=e43]: 0 / 90일 완료
+      - generic [ref=e44]:
+        - button "D-1" [ref=e151] [cursor=pointer]:
+          - generic [ref=e152]: D-1
+        - button "D-2" [ref=e153] [cursor=pointer]:
+          - generic [ref=e154]: D-2
+        - button "D-3" [ref=e155] [cursor=pointer]:
+          - generic [ref=e156]: D-3
+        - button "D-4" [ref=e157] [cursor=pointer]:
+          - generic [ref=e158]: D-4
+        - button "D-5" [ref=e159] [cursor=pointer]:
+          - generic [ref=e160]: D-5
+        - button "D-6" [ref=e161] [cursor=pointer]:
+          - generic [ref=e162]: D-6
+        - button "D-7" [ref=e163] [cursor=pointer]:
+          - generic [ref=e164]: D-7
+        - button "D-8" [ref=e165] [cursor=pointer]:
+          - generic [ref=e166]: D-8
+        - button "D-9" [ref=e167] [cursor=pointer]:
+          - generic [ref=e168]: D-9
+        - button "D-10" [ref=e169] [cursor=pointer]:
+          - generic [ref=e170]: D-10
+        - button "D-11" [ref=e171] [cursor=pointer]:
+          - generic [ref=e172]: D-11
+        - button "D-12" [ref=e173] [cursor=pointer]:
+          - generic [ref=e174]: D-12
+        - button "D-13" [ref=e175] [cursor=pointer]:
+          - generic [ref=e176]: D-13
+        - button "D-14" [ref=e177] [cursor=pointer]:
+          - generic [ref=e178]: D-14
+        - button "D-15" [ref=e179] [cursor=pointer]:
+          - generic [ref=e180]: D-15
+        - button "D-16" [ref=e181] [cursor=pointer]:
+          - generic [ref=e182]: D-16
+        - button "D-17" [ref=e183] [cursor=pointer]:
+          - generic [ref=e184]: D-17
+        - button "D-18" [ref=e185] [cursor=pointer]:
+          - generic [ref=e186]: D-18
+        - button "D-19" [ref=e187] [cursor=pointer]:
+          - generic [ref=e188]: D-19
+        - button "D-20" [ref=e189] [cursor=pointer]:
+          - generic [ref=e190]: D-20
+        - button "D-21" [ref=e191] [cursor=pointer]:
+          - generic [ref=e192]: D-21
+        - button "D-22" [ref=e193] [cursor=pointer]:
+          - generic [ref=e194]: D-22
+        - button "D-23" [ref=e195] [cursor=pointer]:
+          - generic [ref=e196]: D-23
+        - button "D-24" [ref=e197] [cursor=pointer]:
+          - generic [ref=e198]: D-24
+        - button "D-25" [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]: D-25
+        - button "D-26" [ref=e201] [cursor=pointer]:
+          - generic [ref=e202]: D-26
+        - button "D-27" [ref=e203] [cursor=pointer]:
+          - generic [ref=e204]: D-27
+        - button "D-28" [ref=e205] [cursor=pointer]:
+          - generic [ref=e206]: D-28
+        - button "D-29" [ref=e207] [cursor=pointer]:
+          - generic [ref=e208]: D-29
+        - button "D-30" [ref=e209] [cursor=pointer]:
+          - generic [ref=e210]: D-30
+    - generic [ref=e45]:
+      - 'heading "📅 { 초급 Day 1 } 오늘의 도전!" [level=2] [ref=e211]'
+      - generic [ref=e47]: 🏅 초급 30일 → 중급 30일 → 고급 30일, 총 90일 도전!
+    - generic [ref=e49]:
+      - generic [ref=e212]:
+        - generic [ref=e213]: 🟢 초급 ✦
+        - generic [ref=e214]: 0/30
+      - generic "클릭하여 페이즈 이동" [ref=e215] [cursor=pointer]:
+        - generic [ref=e216]: 🟡 중급 ↗
+        - generic [ref=e217]: 0/30
+      - generic "클릭하여 페이즈 이동" [ref=e218] [cursor=pointer]:
+        - generic [ref=e219]: 🔴 고급 ↗
+        - generic [ref=e220]: 0/30
+    - generic [ref=e221]:
+      - generic [ref=e222]:
+        - generic [ref=e223]:
+          - generic [ref=e224]:
+            - img [ref=e225]
+            - text: 어떻게 하나요? (실전 요령)
+          - paragraph [ref=e227]: ① 무릎을 살짝 굽혀 충격을 흡수해요. ② 손목으로 줄을 가볍게 돌려요. ③ 발앞꿈치로 사뿐히 착지하세요!
+        - generic [ref=e228]:
+          - generic [ref=e229]:
+            - generic [ref=e230]: "1"
+            - generic [ref=e231]: 양발 모아 뛰기
+          - generic [ref=e232]: ▶ 시청 대기
+        - paragraph [ref=e233]: 가장 기본이 되는 필수 기술! 두 발을 모으고 리듬감을 익혀요.
+        - generic [ref=e234] [cursor=pointer]:
+          - img [ref=e235]
+          - generic [ref=e236]:
+            - button [ref=e237]:
+              - img [ref=e238]
+            - generic [ref=e240]:
+              - generic [ref=e241]: ▶ YouTube에서 보기
+              - generic [ref=e242]: 클릭 후 15초 체크됩니다
+        - generic [ref=e243]:
+          - generic [ref=e244]:
+            - generic [ref=e245]: 🎯 3분 실전 연습
+            - generic [ref=e246]: 3:00
+          - button "실전 시작!" [disabled] [ref=e247]
+      - generic [ref=e248]:
+        - generic [ref=e249]:
+          - generic [ref=e250]:
+            - img [ref=e251]
+            - text: 어떻게 하나요? (실전 요령)
+          - paragraph [ref=e253]: ① 제자리에서 조깅하듯 발을 번갈아 들어요. ② 다리를 뒤로 너무 높게 차지 마세요. ③ 가볍게 발을 통과시켜요.
+        - generic [ref=e254]:
+          - generic [ref=e255]:
+            - generic [ref=e256]: "2"
+            - generic [ref=e257]: 구보 뛰기
+          - generic [ref=e258]: ▶ 시청 대기
+        - paragraph [ref=e259]: 걷거나 조깅하는 박자로 왼발, 오른발을 엇갈려 부드럽게 넘어요.
+        - generic [ref=e260] [cursor=pointer]:
+          - img [ref=e261]
+          - generic [ref=e262]:
+            - button [ref=e263]:
+              - img [ref=e264]
+            - generic [ref=e266]:
+              - generic [ref=e267]: ▶ YouTube에서 보기
+              - generic [ref=e268]: 클릭 후 15초 체크됩니다
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - generic [ref=e271]: 🎯 3분 실전 연습
+            - generic [ref=e272]: 3:00
+          - button "실전 시작!" [disabled] [ref=e273]
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - generic [ref=e276]:
+            - img [ref=e277]
+            - text: 어떻게 하나요? (실전 요령)
+          - paragraph [ref=e279]: ① 첫 점프에 다리를 어깨너비로 벌려요. ② 두 번째 점프에 다시 모아요. ③ 줄과 스텝이 꼬이지 않게 호흡을 맞춰요.
+        - generic [ref=e280]:
+          - generic [ref=e281]:
+            - generic [ref=e282]: "3"
+            - generic [ref=e283]: 좌우 벌려 뛰기
+          - generic [ref=e284]: ▶ 시청 대기
+        - paragraph [ref=e285]: 줄 한 바퀴마다 벌렸다가 모으기를 반복해 재미를 더해요.
+        - generic [ref=e286] [cursor=pointer]:
+          - img [ref=e287]
+          - generic [ref=e288]:
+            - button [ref=e289]:
+              - img [ref=e290]
+            - generic [ref=e292]:
+              - generic [ref=e293]: ▶ YouTube에서 보기
+              - generic [ref=e294]: 클릭 후 15초 체크됩니다
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - generic [ref=e297]: 🎯 3분 실전 연습
+            - generic [ref=e298]: 3:00
+          - button "실전 시작!" [disabled] [ref=e299]
+  - button "초급 영상 3개를 모두 시청해야 도장을 받을 수 있어요!" [disabled] [ref=e300]:
+    - img [ref=e53]
+    - generic [ref=e56]: 초급 영상 3개를 모두 시청해야 도장을 받을 수 있어요!
+  - generic [ref=e304]:
+    - generic [ref=e305]:
+      - generic [ref=e306]: 🛒 아이템 상점
+      - generic [ref=e307]:
+        - generic [ref=e308]: 💰 0
+        - button "✕" [ref=e309] [cursor=pointer]
+    - generic [ref=e310]:
+      - button "🎩 모자" [ref=e311] [cursor=pointer]
+      - button "👕 상의" [ref=e312] [cursor=pointer]
+      - button "👖 하의" [ref=e313] [cursor=pointer]
+      - button "💎 악세서리" [ref=e314] [cursor=pointer]
+    - generic [ref=e315]:
+      - generic [ref=e316]:
+        - img [ref=e318]
+        - generic [ref=e358]: 야구 모자
+        - generic [ref=e359]: 🔧 무료
+        - button "구매하기" [ref=e360] [cursor=pointer]
+      - generic [ref=e361]:
+        - img [ref=e363]
+        - generic [ref=e405]: 왕관
+        - generic [ref=e406]: 🔧 무료
+        - button "구매하기" [ref=e407] [cursor=pointer]
+      - generic [ref=e408]:
+        - img [ref=e410]
+        - generic [ref=e451]: 리본 머리띠
+        - generic [ref=e452]: 🔧 무료
+        - button "구매하기" [ref=e453] [cursor=pointer]
+      - generic [ref=e454]:
+        - img [ref=e456]
+        - generic [ref=e496]: 비니 모자
+        - generic [ref=e497]: 🔧 무료
+        - button "구매하기" [ref=e498] [cursor=pointer]
+      - generic [ref=e499]:
+        - img [ref=e501]
+        - generic [ref=e542]: 마법사 모자
+        - generic [ref=e543]: 🔧 무료
+        - button "구매하기" [ref=e544] [cursor=pointer]
+      - generic [ref=e545]:
+        - img [ref=e547]
+        - generic [ref=e590]: 꽃 머리핀
+        - generic [ref=e591]: 🔧 무료
+        - button "구매하기" [ref=e592] [cursor=pointer]
+      - generic [ref=e593]:
+        - img [ref=e595]
+        - generic [ref=e639]: 파티 모자
+        - generic [ref=e640]: 🔧 무료
+        - button "구매하기" [ref=e641] [cursor=pointer]
+      - generic [ref=e642]:
+        - img [ref=e644]
+        - generic [ref=e685]: 천사 후광
+        - generic [ref=e686]: 🔧 무료
+        - button "구매하기" [ref=e687] [cursor=pointer]
+      - generic [ref=e688]:
+        - img [ref=e690]
+        - generic [ref=e729]: 스포츠 헬멧
+        - generic [ref=e730]: 🔧 무료
+        - button "구매하기" [ref=e731] [cursor=pointer]
+      - generic [ref=e732]:
+        - img [ref=e734]
+        - generic [ref=e776]: 고양이 귀 머리띠
+        - generic [ref=e777]: 🔧 무료
+        - button "구매하기" [ref=e778] [cursor=pointer]
+      - generic [ref=e779]:
+        - img [ref=e781]
+        - generic [ref=e821]: 탑햇
+        - generic [ref=e822]: 🔧 무료
+        - button "구매하기" [ref=e823] [cursor=pointer]
+      - generic [ref=e824]:
+        - img [ref=e826]
+        - generic [ref=e866]: 베레모
+        - generic [ref=e867]: 🔧 무료
+        - button "구매하기" [ref=e868] [cursor=pointer]
+      - generic [ref=e869]:
+        - img [ref=e871]
+        - generic [ref=e912]: 카우보이 모자
+        - generic [ref=e913]: 🔧 무료
+        - button "구매하기" [ref=e914] [cursor=pointer]
+      - generic [ref=e915]:
+        - img [ref=e917]
+        - generic [ref=e958]: 해적 삼각모
+        - generic [ref=e959]: 🔧 무료
+        - button "구매하기" [ref=e960] [cursor=pointer]
+      - generic [ref=e961]:
+        - img [ref=e963]
+        - generic [ref=e1003]: 요리사 모자
+        - generic [ref=e1004]: 🔧 무료
+        - button "구매하기" [ref=e1005] [cursor=pointer]
+      - generic [ref=e1006]:
+        - img [ref=e1008]
+        - generic [ref=e1048]: 산타 모자
+        - generic [ref=e1049]: 🔧 무료
+        - button "구매하기" [ref=e1050] [cursor=pointer]
+      - generic [ref=e1051]:
+        - img [ref=e1053]
+        - generic [ref=e1094]: 학사모
+        - generic [ref=e1095]: 🔧 무료
+        - button "구매하기" [ref=e1096] [cursor=pointer]
+      - generic [ref=e1097]:
+        - img [ref=e1099]
+        - generic [ref=e1137]: 운동 머리띠
+        - generic [ref=e1138]: 🔧 무료
+        - button "구매하기" [ref=e1139] [cursor=pointer]
+      - generic [ref=e1140]:
+        - img [ref=e1142]
+        - generic [ref=e1186]: 티아라
+        - generic [ref=e1187]: 🔧 무료
+        - button "구매하기" [ref=e1188] [cursor=pointer]
+      - generic [ref=e1189]:
+        - img [ref=e1191]
+        - generic [ref=e1230]: 사슴 뿔
+        - generic [ref=e1231]: 🔧 무료
+        - button "구매하기" [ref=e1232] [cursor=pointer]
+      - generic [ref=e1233]:
+        - img [ref=e1235]
+        - generic [ref=e1277]: 토끼귀 머리띠
+        - generic [ref=e1278]: 🔧 무료
+        - button "구매하기" [ref=e1279] [cursor=pointer]
+      - generic [ref=e1280]:
+        - img [ref=e1282]
+        - generic [ref=e1321]: 악마 뿔
+        - generic [ref=e1322]: 🔧 무료
+        - button "구매하기" [ref=e1323] [cursor=pointer]
+      - generic [ref=e1324]:
+        - img [ref=e1326]
+        - generic [ref=e1368]: 버섯 모자
+        - generic [ref=e1369]: 🔧 무료
+        - button "구매하기" [ref=e1370] [cursor=pointer]
+      - generic [ref=e1371]:
+        - img [ref=e1373]
+        - generic [ref=e1415]: 프로펠러 모자
+        - generic [ref=e1416]: 🔧 무료
+        - button "구매하기" [ref=e1417] [cursor=pointer]
+      - generic [ref=e1418]:
+        - img [ref=e1420]
+        - generic [ref=e1460]: 밀짚 모자
+        - generic [ref=e1461]: 🔧 무료
+        - button "구매하기" [ref=e1462] [cursor=pointer]
+      - generic [ref=e1463]:
+        - img [ref=e1465]
+        - generic [ref=e1505]: 전사 투구
+        - generic [ref=e1506]: 🔧 무료
+        - button "구매하기" [ref=e1507] [cursor=pointer]
+      - generic [ref=e1508]:
+        - img [ref=e1510]
+        - generic [ref=e1550]: 우주비행사 헬멧
+        - generic [ref=e1551]: 🔧 무료
+        - button "구매하기" [ref=e1552] [cursor=pointer]
+      - generic [ref=e1553]:
+        - img [ref=e1555]
+        - generic [ref=e1597]: 다이아 왕관
+        - generic [ref=e1598]: 🔧 무료
+        - button "구매하기" [ref=e1599] [cursor=pointer]
+      - generic [ref=e1600]:
+        - img [ref=e1602]
+        - generic [ref=e1650]: 꽃 화환
+        - generic [ref=e1651]: 🔧 무료
+        - button "구매하기" [ref=e1652] [cursor=pointer]
+      - generic [ref=e1653]:
+        - img [ref=e1655]
+        - generic [ref=e1697]: 여우귀 머리띠
+        - generic [ref=e1698]: 🔧 무료
+        - button "구매하기" [ref=e1699] [cursor=pointer]
+      - generic [ref=e1700]:
+        - img [ref=e1702]
+        - generic [ref=e1744]: 곰귀 머리띠
+        - generic [ref=e1745]: 🔧 무료
+        - button "구매하기" [ref=e1746] [cursor=pointer]
+      - generic [ref=e1747]:
+        - img [ref=e1749]
+        - generic [ref=e1789]: 러시아 모자
+        - generic [ref=e1790]: 🔧 무료
+        - button "구매하기" [ref=e1791] [cursor=pointer]
+      - generic [ref=e1792]:
+        - img [ref=e1794]
+        - generic [ref=e1834]: 공사장 헬멧
+        - generic [ref=e1835]: 🔧 무료
+        - button "구매하기" [ref=e1836] [cursor=pointer]
+      - generic [ref=e1837]:
+        - img [ref=e1839]
+        - generic [ref=e1879]: 닌자 두건
+        - generic [ref=e1880]: 🔧 무료
+        - button "구매하기" [ref=e1881] [cursor=pointer]
+      - generic [ref=e1882]:
+        - img [ref=e1884]
+        - generic [ref=e1922]: 월계관
+        - generic [ref=e1923]: 🔧 무료
+        - button "구매하기" [ref=e1924] [cursor=pointer]
+      - generic [ref=e1925]:
+        - img [ref=e1927]
+        - generic [ref=e1968]: 선장 모자
+        - generic [ref=e1969]: 🔧 무료
+        - button "구매하기" [ref=e1970] [cursor=pointer]
+      - generic [ref=e1971]:
+        - img [ref=e1973]
+        - generic [ref=e2013]: 터번
+        - generic [ref=e2014]: 🔧 무료
+        - button "구매하기" [ref=e2015] [cursor=pointer]
+      - generic [ref=e2016]:
+        - img [ref=e2018]
+        - generic [ref=e2059]: 헤드폰
+        - generic [ref=e2060]: 🔧 무료
+        - button "구매하기" [ref=e2061] [cursor=pointer]
+      - generic [ref=e2062]:
+        - img [ref=e2064]
+        - generic [ref=e2104]: 귀마개
+        - generic [ref=e2105]: 🔧 무료
+        - button "구매하기" [ref=e2106] [cursor=pointer]
+      - generic [ref=e2107]:
+        - img [ref=e2109]
+        - generic [ref=e2150]: 선원 모자
+        - generic [ref=e2151]: 🔧 무료
+        - button "구매하기" [ref=e2152] [cursor=pointer]
+      - generic [ref=e2153]:
+        - img [ref=e2155]
+        - generic [ref=e2194]: 용 뿔
+        - generic [ref=e2195]: 🔧 무료
+        - button "구매하기" [ref=e2196] [cursor=pointer]
+      - generic [ref=e2197]:
+        - img [ref=e2199]
+        - generic [ref=e2239]: 얼음 왕관
+        - generic [ref=e2240]: 🔧 무료
+        - button "구매하기" [ref=e2241] [cursor=pointer]
+      - generic [ref=e2242]:
+        - img [ref=e2244]
+        - generic [ref=e2285]: 별 머리띠
+        - generic [ref=e2286]: 🔧 무료
+        - button "구매하기" [ref=e2287] [cursor=pointer]
+      - generic [ref=e2288]:
+        - img [ref=e2290]
+        - generic [ref=e2331]: 호박 모자
+        - generic [ref=e2332]: 🔧 무료
+        - button "구매하기" [ref=e2333] [cursor=pointer]
+      - generic [ref=e2334]:
+        - img [ref=e2336]
+        - generic [ref=e2375]: 반다나
+        - generic [ref=e2376]: 🔧 무료
+        - button "구매하기" [ref=e2377] [cursor=pointer]
+      - generic [ref=e2378]:
+        - img [ref=e2380]
+        - generic [ref=e2419]: 음표 머리핀
+        - generic [ref=e2420]: 🔧 무료
+        - button "구매하기" [ref=e2421] [cursor=pointer]
+      - generic [ref=e2422]:
+        - img [ref=e2424]
+        - generic [ref=e2465]: 무지개 리본
+        - generic [ref=e2466]: 🔧 무료
+        - button "구매하기" [ref=e2467] [cursor=pointer]
+      - generic [ref=e2468]:
+        - img [ref=e2470]
+        - generic [ref=e2510]: 방울 모자
+        - generic [ref=e2511]: 🔧 무료
+        - button "구매하기" [ref=e2512] [cursor=pointer]
+      - generic [ref=e2513]:
+        - img [ref=e2515]
+        - generic [ref=e2554]: 사자 갈기 모자
+        - generic [ref=e2555]: 🔧 무료
+        - button "구매하기" [ref=e2556] [cursor=pointer]
+      - generic [ref=e2557]:
+        - img [ref=e2559]
+        - generic [ref=e2600]: 썬 햇
+        - generic [ref=e2601]: 🔧 무료
+        - button "구매하기" [ref=e2602] [cursor=pointer]

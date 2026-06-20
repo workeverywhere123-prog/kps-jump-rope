@@ -1,0 +1,230 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e5] [cursor=pointer]:
+          - generic [ref=e9]: KEW PRIMARY SCHOOL
+          - generic [ref=e10]: K
+          - generic [ref=e12]: BE WORTHY
+          - generic [ref=e13]: ★
+          - generic [ref=e14]: ★
+        - generic "홈으로 이동" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Kew Primary School · Melbourne
+          - generic [ref=e17]: KPS KPS Jump Rope Club
+      - generic [ref=e19]:
+        - generic [ref=e20]: Progress
+        - generic [ref=e21]: 0 / 90일
+    - generic [ref=e22]:
+      - button "Community Team Info" [ref=e23] [cursor=pointer]:
+        - generic [ref=e24]: Community
+        - generic [ref=e25]: Team Info
+      - button "Achievement Training & Challenge" [ref=e26] [cursor=pointer]:
+        - generic [ref=e27]: Achievement
+        - generic [ref=e28]: Training & Challenge
+      - button "Connect Schedule & Connect" [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]: Connect
+        - generic [ref=e31]: Schedule & Connect
+      - button "Gallery Activity Log" [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]: Gallery
+        - generic [ref=e34]: Activity Log
+      - button "Wellness Health Guide" [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]: Wellness
+        - generic [ref=e37]: Health Guide
+      - button "NEW Stage Performance" [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]: NEW
+        - generic [ref=e40]: Stage
+        - generic [ref=e41]: Performance
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - generic [ref=e44]: Together we run, together we grow
+      - generic [ref=e45]: Reach for the top with Jump Rope 🪢
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]: "0"
+          - generic [ref=e49]: Days Done
+        - generic [ref=e50]:
+          - generic [ref=e51]: Day 1
+          - generic [ref=e52]: Current
+        - generic [ref=e53]:
+          - generic [ref=e54]: 🔥 0
+          - generic [ref=e55]: Streak
+    - generic [ref=e56]:
+      - generic [ref=e58]:
+        - generic [ref=e59]: 🏅 90-Day Journey
+        - generic [ref=e60]: 0 / 90 Days
+      - generic [ref=e62]:
+        - 'heading "📅 { Day 1 } 오늘의 도전!" [level=2] [ref=e63]'
+        - generic [ref=e64]: Beginner 30 → Intermediate 30 → Advanced 30, 90 Days Total!
+  - button "Watch the mission video and give it a try!" [disabled] [ref=e69]:
+    - img [ref=e70]
+    - generic [ref=e73]: Watch the mission video and give it a try!
+  - contentinfo [ref=e75]:
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: 🪢
+            - generic [ref=e81]:
+              - generic [ref=e82]: KPS Jump Rope Club
+              - generic [ref=e83]: KEW PRIMARY SCHOOL · MELBOURNE
+          - generic [ref=e84]: Jump together, grow together 🌱
+          - generic [ref=e85]: From basics to advanced in a 90-day challenge, building jump rope skills and teamwork together.
+        - generic [ref=e86]:
+          - generic [ref=e87]: Contact
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e90]: 👑
+              - generic [ref=e91]: "Team Leader: Sihyung Lee"
+            - generic [ref=e92]:
+              - generic [ref=e93]: 🏫
+              - text: Kew Primary School
+            - generic [ref=e94]:
+              - generic [ref=e95]: 📍
+              - text: Melbourne, VIC
+            - generic [ref=e96]:
+              - generic [ref=e97]: ⏰
+              - generic [ref=e98]: 월·수·금 3:30 PM
+        - generic [ref=e99]:
+          - generic [ref=e100]: Navigation
+          - generic [ref=e101]:
+            - button "Home" [ref=e102] [cursor=pointer]
+            - button "Community" [ref=e103] [cursor=pointer]
+            - button "Achievement" [ref=e104] [cursor=pointer]
+            - button "Connect" [ref=e105] [cursor=pointer]
+            - button "Gallery" [ref=e106] [cursor=pointer]
+            - button "Wellness" [ref=e107] [cursor=pointer]
+            - button "Stage" [ref=e108] [cursor=pointer]
+        - generic [ref=e109]:
+          - generic [ref=e110]: Location
+          - generic [ref=e111]: Kew Primary School
+          - generic [ref=e112]:
+            - text: Cotham Rd, Kew VIC 3101
+            - text: Melbourne, Australia
+            - text: ─────────────
+            - text: 🏃 School Gym (체육관)
+      - generic [ref=e113]:
+        - generic [ref=e114]: © 2026 KPS Jump Rope Club — Kew Primary School. All Rights Reserved.
+        - generic [ref=e115]:
+          - generic [ref=e116]: "School Values:"
+          - generic [ref=e117]: Community · Achievement · Resilience · Empathy
+  - generic [ref=e118]:
+    - navigation [ref=e119]:
+      - generic [ref=e120]:
+        - img [ref=e121]:
+          - generic [ref=e123]: K
+        - generic [ref=e124]: KPS Jump Rope Club
+      - button "Log In / Sign Up ↑" [ref=e125] [cursor=pointer]
+    - generic [ref=e126]:
+      - img
+      - generic [ref=e127]:
+        - img [ref=e129]:
+          - generic [ref=e133]: KEW PRIMARY SCHOOL
+          - generic [ref=e134]: K
+          - generic [ref=e136]: BE WORTHY
+          - generic [ref=e137]: ★
+          - generic [ref=e138]: ★
+        - generic [ref=e139]: ✦ Kew Primary School · Melbourne ✦
+        - heading "KPS Jump Rope Club" [level=1] [ref=e140]
+        - heading "Jump Rope Club" [level=2] [ref=e141]
+        - paragraph [ref=e143]: The Kew Primary School Jump Rope Club led by Team Leader Sihyung Lee. We build the joy of growing together through structured training and teamwork.
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - img [ref=e146]:
+            - generic [ref=e150]: KEW PRIMARY SCHOOL
+            - generic [ref=e151]: K
+            - generic [ref=e153]: BE WORTHY
+            - generic [ref=e154]: ★
+            - generic [ref=e155]: ★
+          - generic [ref=e156]: Jump Rope Club 90-Day Challenge
+          - generic [ref=e157]: Kew Primary School · Melbourne
+        - generic [ref=e158]:
+          - button "Log In" [ref=e159] [cursor=pointer]
+          - button "Join" [ref=e160] [cursor=pointer]
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e163]: Username
+            - textbox "Enter username" [ref=e164]
+          - generic [ref=e165]:
+            - generic [ref=e166]: Password
+            - textbox "Enter password" [ref=e167]
+          - button "Log In" [ref=e169] [cursor=pointer]
+          - button "Don't have an account? Join" [ref=e170] [cursor=pointer]
+      - generic [ref=e171]: ∨ Scroll to learn more
+    - generic [ref=e173]:
+      - generic [ref=e174]:
+        - generic [ref=e175]: 90 Days
+        - generic [ref=e176]: Training Program
+      - generic [ref=e177]:
+        - generic [ref=e178]: 3 Levels
+        - generic [ref=e179]: Beginner · Inter · Advanced
+      - generic [ref=e180]:
+        - generic [ref=e181]: 3x/week
+        - generic [ref=e182]: Weekly Training
+      - generic [ref=e183]:
+        - generic [ref=e184]: Grand
+        - generic [ref=e185]: Showcase
+    - generic [ref=e187]:
+      - generic [ref=e188]: About the Club
+      - heading "What is the KPS Jump Rope Club?" [level=2] [ref=e189]
+      - paragraph [ref=e190]: The official Kew Primary School Jump Rope Club, founded and led by Team Leader Sihyung Lee. More than a one-off event — it's a long-term club where we train and grow together. We offer a structured curriculum from beginner to advanced, plus Grand Showcase performance opportunities.
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - generic [ref=e193]: 🪢
+          - generic [ref=e194]: Structured Skill Training
+          - generic [ref=e195]: A 3-level curriculum (Beginner · Intermediate · Advanced) to master skills from basics to advanced.
+        - generic [ref=e196]:
+          - generic [ref=e197]: 🤝
+          - generic [ref=e198]: Teamwork & Belonging
+          - generic [ref=e199]: Train together and encourage each other — build a real sense of community and belonging.
+        - generic [ref=e200]:
+          - generic [ref=e201]: 🏆
+          - generic [ref=e202]: Continuous Growth
+          - generic [ref=e203]: A long-term club that goes beyond a one-off event — steadily building skills over time.
+        - generic [ref=e204]:
+          - generic [ref=e205]: ✨
+          - generic [ref=e206]: Grand Showcase
+          - generic [ref=e207]: A special performance where selected members showcase their jump rope skills on stage.
+    - generic [ref=e209]:
+      - generic [ref=e210]: Training Program
+      - heading "90-Day Training Curriculum" [level=2] [ref=e211]
+      - generic [ref=e212]:
+        - generic [ref=e213]:
+          - generic [ref=e215]: Beginner
+          - generic [ref=e216]:
+            - generic [ref=e217]: Day 1 – 30
+            - generic [ref=e218]: Building Fundamentals
+            - generic [ref=e219]: Master basics including two-foot, one-foot, and cross jumps while building fitness and rhythm.
+        - generic [ref=e220]:
+          - generic [ref=e222]: Intermediate
+          - generic [ref=e223]:
+            - generic [ref=e224]: Day 31 – 60
+            - generic [ref=e225]: Applied Techniques
+            - generic [ref=e226]: Level up with double unders, backwards jumping, and speed training.
+        - generic [ref=e227]:
+          - generic [ref=e229]: Advanced
+          - generic [ref=e230]:
+            - generic [ref=e231]: Day 61 – 90
+            - generic [ref=e232]: Advanced Skills & Performance Prep
+            - generic [ref=e233]: Prepare for the Grand Showcase with triple unders and performance choreography.
+    - generic [ref=e235]:
+      - generic [ref=e236]: Team Leader
+      - heading "Our Leader" [level=2] [ref=e237]
+      - generic [ref=e238]:
+        - generic [ref=e239]: 👑 Team Leader
+        - generic [ref=e240]:
+          - generic [ref=e241]: 🏃
+          - generic [ref=e242]:
+            - generic [ref=e243]: Sihyung Lee
+            - generic [ref=e244]: KPS Jump Rope Club Founder
+            - generic [ref=e245]:
+              - generic [ref=e246]: 🪢 Club Founder
+              - generic [ref=e247]: 🏆 Team Leader
+        - paragraph [ref=e248]: "\"Let's become the best through jump rope together! A little each day — there's nothing we can't do as a team.\""
+    - generic [ref=e250]:
+      - generic [ref=e251]: Ready to join us?
+      - heading "Join the Club" [level=2] [ref=e252]
+      - paragraph [ref=e253]: Join the KPS Jump Rope Club — train together, perform together, grow together.
+      - generic [ref=e254]:
+        - button "🪢 Join as a Member" [ref=e255] [cursor=pointer]
+        - button "Existing Member Log In" [ref=e256] [cursor=pointer]
+    - generic [ref=e258]: © 2026 KPS Jump Rope Club — Kew Primary School, Melbourne. All Rights Reserved.

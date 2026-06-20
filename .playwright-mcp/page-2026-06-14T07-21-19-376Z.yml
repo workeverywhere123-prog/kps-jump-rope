@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: Community • Achievement • Resilience • Empathy
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6] [cursor=pointer]:
+          - generic [ref=e10]: KEW PRIMARY SCHOOL
+          - generic [ref=e11]: K
+          - generic [ref=e13]: BE WORTHY
+          - generic [ref=e14]: ★
+          - generic [ref=e15]: ★
+        - generic [ref=e16]:
+          - generic [ref=e17]: Kew Primary School · Melbourne
+          - generic [ref=e18]: 줄넘기 팀 90일 챌린지
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 진행 현황
+          - generic [ref=e22]: 0 / 90일
+        - button "초기화" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+          - text: 초기화
+  - generic [ref=e26]:
+    - generic [ref=e27]: 함께 뛰고, 함께 성장하는
+    - generic [ref=e28]: 줄넘기로 최고를 향해 🪢
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: "0"
+        - generic [ref=e32]: 완료한 날
+      - generic [ref=e33]:
+        - generic [ref=e34]: Day 1
+        - generic [ref=e35]: 현재 도전
+      - generic [ref=e36]:
+        - generic [ref=e37]: 🔥 0
+        - generic [ref=e38]: 연속 일수
+  - generic [ref=e39]:
+    - generic [ref=e41]:
+      - generic [ref=e42]: 🏅 90일 대장정
+      - generic [ref=e43]: 0 / 90일 완료
+    - generic [ref=e45]:
+      - 'heading "📅 { Day 1 } 오늘의 도전!" [level=2] [ref=e46]'
+      - generic [ref=e47]: 🏅 초급 30일 → 중급 30일 → 고급 30일, 총 90일 도전!
+  - button "먼저 미션 영상을 보고 성공해 보세요!" [disabled] [ref=e52]:
+    - img [ref=e53]
+    - generic [ref=e56]: 먼저 미션 영상을 보고 성공해 보세요!
+  - generic [ref=e58]:
+    - generic [ref=e59]:
+      - img [ref=e60]:
+        - generic [ref=e64]: KEW PRIMARY SCHOOL
+        - generic [ref=e65]: K
+        - generic [ref=e67]: BE WORTHY
+        - generic [ref=e68]: ★
+        - generic [ref=e69]: ★
+      - generic [ref=e70]: 줄넘기 팀 30일 챌린지
+      - generic [ref=e71]: Kew Primary School · Melbourne
+    - generic [ref=e72]:
+      - generic [ref=e73]: 로그인
+      - generic [ref=e74]:
+        - generic [ref=e75]: 아이디
+        - textbox "아이디 입력" [ref=e76]
+      - generic [ref=e77]:
+        - generic [ref=e78]: 비밀번호
+        - textbox "비밀번호 입력" [ref=e79]
+      - button "로그인" [ref=e81] [cursor=pointer]
+      - button "계정이 없으신가요? 회원가입" [ref=e82] [cursor=pointer]

@@ -1,0 +1,142 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: Community • Achievement • Resilience • Empathy
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6] [cursor=pointer]:
+          - generic [ref=e10]: KEW PRIMARY SCHOOL
+          - generic [ref=e11]: K
+          - generic [ref=e13]: BE WORTHY
+          - generic [ref=e14]: ★
+          - generic [ref=e15]: ★
+        - generic [ref=e16]:
+          - generic [ref=e17]: Kew Primary School · Melbourne
+          - generic [ref=e18]: 줄넘기 팀 90일 챌린지
+      - generic [ref=e19]:
+        - generic [ref=e21]:
+          - button [ref=e22] [cursor=pointer]:
+            - img [ref=e23]
+          - generic [ref=e56]:
+            - generic [ref=e57]: 👑 kpsrope
+            - generic [ref=e58]:
+              - generic [ref=e59]: 💰 0
+              - button "상점" [ref=e60] [cursor=pointer]
+          - button "로그아웃" [ref=e61] [cursor=pointer]
+        - generic [ref=e62]:
+          - generic [ref=e63]: 진행 현황
+          - generic [ref=e64]: 0 / 90일
+        - button "초기화" [ref=e65] [cursor=pointer]:
+          - img [ref=e66]
+          - text: 초기화
+  - generic [ref=e68]:
+    - generic [ref=e69]: 함께 뛰고, 함께 성장하는
+    - generic [ref=e70]: 줄넘기로 최고를 향해 🪢
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]: "0"
+        - generic [ref=e74]: 완료한 날
+      - generic [ref=e75]:
+        - generic [ref=e76]: Day 1
+        - generic [ref=e77]: 현재 도전
+      - generic [ref=e78]:
+        - generic [ref=e79]: 🔥 0
+        - generic [ref=e80]: 연속 일수
+  - generic [ref=e81]:
+    - generic [ref=e83]:
+      - generic [ref=e84]: 🏅 90일 대장정
+      - generic [ref=e85]: 0 / 90일 완료
+    - generic [ref=e87]:
+      - 'heading "📅 { Day 1 } 오늘의 도전!" [level=2] [ref=e88]'
+      - generic [ref=e89]: 🏅 초급 30일 → 중급 30일 → 고급 30일, 총 90일 도전!
+  - button "먼저 미션 영상을 보고 성공해 보세요!" [disabled] [ref=e94]:
+    - img [ref=e95]
+    - generic [ref=e98]: 먼저 미션 영상을 보고 성공해 보세요!
+  - generic [ref=e100]:
+    - generic [ref=e101]:
+      - generic [ref=e102]: 나만의 캐릭터 만들기 🎨
+      - generic [ref=e103]: 나만의 동물 친구를 꾸며보세요!
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - img [ref=e108]
+          - generic [ref=e141]: 미리보기
+        - generic [ref=e142]:
+          - button "🎉 완성!" [ref=e143] [cursor=pointer]
+          - button "🛒 상점" [ref=e144] [cursor=pointer]
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - button "🐾 베이스" [ref=e147] [cursor=pointer]
+          - button "😊 얼굴" [ref=e148] [cursor=pointer]
+          - button "👕 의상" [ref=e149] [cursor=pointer]
+          - button "🌈 배경" [ref=e150] [cursor=pointer]
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]: 🐾 동물 선택
+            - generic [ref=e154]:
+              - button "🐻 곰돌이" [ref=e155] [cursor=pointer]:
+                - generic [ref=e156]: 🐻
+                - generic [ref=e157]: 곰돌이
+              - button "🐱 야옹이" [ref=e158] [cursor=pointer]:
+                - generic [ref=e159]: 🐱
+                - generic [ref=e160]: 야옹이
+              - button "🐰 토끼" [ref=e161] [cursor=pointer]:
+                - generic [ref=e162]: 🐰
+                - generic [ref=e163]: 토끼
+              - button "🦊 여우" [ref=e164] [cursor=pointer]:
+                - generic [ref=e165]: 🦊
+                - generic [ref=e166]: 여우
+              - button "🐷 꿀꿀이" [ref=e167] [cursor=pointer]:
+                - generic [ref=e168]: 🐷
+                - generic [ref=e169]: 꿀꿀이
+              - button "🐶 강아지" [ref=e170] [cursor=pointer]:
+                - generic [ref=e171]: 🐶
+                - generic [ref=e172]: 강아지
+              - button "🐨 코알라" [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]: 🐨
+                - generic [ref=e175]: 코알라
+              - button "🐼 판다" [ref=e176] [cursor=pointer]:
+                - generic [ref=e177]: 🐼
+                - generic [ref=e178]: 판다
+              - button "🦁 사자" [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]: 🦁
+                - generic [ref=e181]: 사자
+              - button "🐯 호랑이" [ref=e182] [cursor=pointer]:
+                - generic [ref=e183]: 🐯
+                - generic [ref=e184]: 호랑이
+              - button "🐹 햄스터" [ref=e185] [cursor=pointer]:
+                - generic [ref=e186]: 🐹
+                - generic [ref=e187]: 햄스터
+              - button "🐸 개구리" [ref=e188] [cursor=pointer]:
+                - generic [ref=e189]: 🐸
+                - generic [ref=e190]: 개구리
+              - button "🐥 오리" [ref=e191] [cursor=pointer]:
+                - generic [ref=e192]: 🐥
+                - generic [ref=e193]: 오리
+              - button "🐲 드래곤" [ref=e194] [cursor=pointer]:
+                - generic [ref=e195]: 🐲
+                - generic [ref=e196]: 드래곤
+              - button "🐺 늑대" [ref=e197] [cursor=pointer]:
+                - generic [ref=e198]: 🐺
+                - generic [ref=e199]: 늑대
+              - button "🐣 병아리" [ref=e200] [cursor=pointer]:
+                - generic [ref=e201]: 🐣
+                - generic [ref=e202]: 병아리
+          - generic [ref=e203]:
+            - generic [ref=e204]: 🎨 털/피부 색상
+            - generic [ref=e205]:
+              - button "갈색" [ref=e206] [cursor=pointer]
+              - button "베이지" [ref=e207] [cursor=pointer]
+              - button "회색" [ref=e208] [cursor=pointer]
+              - button "흰색" [ref=e209] [cursor=pointer]
+              - button "주황" [ref=e210] [cursor=pointer]
+              - button "핑크" [ref=e211] [cursor=pointer]
+              - button "파랑" [ref=e212] [cursor=pointer]
+              - button "민트" [ref=e213] [cursor=pointer]
+              - button "보라" [ref=e214] [cursor=pointer]
+              - button "노랑" [ref=e215] [cursor=pointer]
+              - button "검정" [ref=e216] [cursor=pointer]
+              - button "빨강" [ref=e217] [cursor=pointer]
+              - button "라임" [ref=e218] [cursor=pointer]
+              - button "하늘" [ref=e219] [cursor=pointer]
+              - button "청록" [ref=e220] [cursor=pointer]
+              - button "라벤더" [ref=e221] [cursor=pointer]

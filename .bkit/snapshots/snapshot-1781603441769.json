@@ -1,0 +1,1299 @@
+{
+  "timestamp": "2026-06-16T09:50:41.767Z",
+  "reason": "compaction",
+  "status": {
+    "version": "2.0",
+    "lastUpdated": "2026-06-16T09:40:23.427Z",
+    "activeFeatures": [
+      "시형이 줄넘기"
+    ],
+    "primaryFeature": "시형이 줄넘기",
+    "features": {
+      "시형이 줄넘기": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-06-10T11:40:27.358Z",
+          "lastUpdated": "2026-06-16T09:40:23.426Z"
+        },
+        "lastFile": "/Users/anjongtae/Desktop/시형이 줄넘기/src/profile.js"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-06-10T10:16:38.649Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-06-16T09:40:23.427Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-06-10T11:40:27.358Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T11:45:26.693Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T11:45:39.578Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T11:45:45.764Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T11:46:12.171Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T11:54:29.341Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T12:01:56.585Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T12:02:04.851Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T12:02:10.675Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T12:55:54.091Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-10T12:56:04.232Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:00:32.195Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:00:40.759Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:03:00.791Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:03:13.575Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:12:27.181Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:43:28.249Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:43:51.681Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:44:04.846Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:47:00.492Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:47:53.941Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:47:59.636Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T09:48:05.422Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T10:59:05.794Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:00:20.955Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:01:20.454Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:01:50.995Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:05:30.276Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:07:18.637Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:09:27.891Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:09:41.408Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-11T11:09:44.884Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T10:39:58.000Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T10:48:16.637Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T10:48:43.321Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T10:49:42.413Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:01:44.074Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:02:10.916Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:03:02.246Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:14:24.181Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:14:35.500Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:15:05.534Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:15:23.549Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:15:36.720Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:15:51.565Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:16:19.506Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:16:43.596Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:16:53.164Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:17:22.341Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:17:29.394Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:17:39.303Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:17:52.596Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:18:04.154Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:18:17.357Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:19:02.144Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:19:06.430Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:19:10.118Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:26:49.936Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:26:57.188Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:27:01.213Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:45:21.107Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:45:56.213Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:46:52.580Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:47:52.797Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:48:09.535Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:48:31.687Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:48:49.359Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:51:32.077Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:51:42.760Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T11:51:58.771Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T12:10:15.250Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T12:24:15.872Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T14:43:58.402Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T14:44:20.915Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T14:45:39.450Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T14:45:47.229Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T14:45:53.524Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:04:54.821Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:07:49.636Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:26:21.007Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:27:43.697Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:28:55.938Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:29:46.155Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:31:25.160Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:31:43.061Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T15:31:51.957Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T22:58:00.335Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T22:58:13.326Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T22:58:25.090Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T22:58:35.569Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T22:58:46.187Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T22:58:53.809Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:44:48.152Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:45:09.791Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:45:32.933Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:45:43.025Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:46:01.594Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:46:22.336Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:48:07.953Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:48:20.361Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-12T23:48:33.503Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-13T05:58:17.842Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T06:50:41.895Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T06:52:09.678Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T06:53:45.732Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T06:54:02.727Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T06:54:15.545Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T06:54:30.389Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T06:54:40.799Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:28:20.294Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:41:20.190Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:41:42.982Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:42:06.999Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:42:29.536Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:44:29.595Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:45:56.062Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:46:19.008Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:47:13.682Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:56:41.532Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:57:06.242Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:57:29.321Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:57:57.674Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T10:58:33.014Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:01:47.499Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:06:45.956Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:06:56.934Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:09:58.338Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:13:03.729Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:13:07.333Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:49:35.824Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:49:48.775Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T11:49:59.573Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:03:53.517Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:04:01.262Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:04:05.249Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:09:15.143Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:09:22.993Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:09:28.110Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:21:34.447Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:21:43.955Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-14T12:21:50.475Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:17:07.112Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:20:00.504Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:23:19.822Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:23:31.580Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:23:45.309Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:23:54.588Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:27:09.733Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:27:21.520Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:27:36.108Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:27:47.644Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:28:00.721Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:28:12.945Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:28:24.882Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:28:36.951Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:29:27.027Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:29:43.916Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:39:34.418Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:39:40.714Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:39:44.609Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:39:48.397Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:39:51.373Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:45:19.575Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:45:28.989Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:45:47.946Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:48:34.032Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:48:44.061Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:48:58.380Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:50:51.131Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:54:27.824Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:54:40.293Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T11:54:53.022Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:00:59.485Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:01:51.331Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:02:34.442Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:07:11.832Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:07:30.360Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:07:57.849Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:08:14.140Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:15:58.034Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:16:02.587Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:16:08.820Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:16:31.321Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:29:59.526Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:30:15.808Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:30:25.538Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:30:38.017Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:30:59.442Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:31:10.700Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:31:21.685Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:42:37.571Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:42:52.646Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:43:05.562Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T12:43:18.199Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:15:54.166Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:16:16.698Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:17:38.009Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:17:39.205Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:20:34.597Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:20:43.466Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:20:50.992Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:20:56.540Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:21:03.936Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:21:10.955Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-15T19:21:16.184Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-16T09:30:22.283Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-16T09:30:49.190Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-16T09:32:58.867Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-16T09:33:20.537Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-06-16T09:40:23.426Z",
+        "feature": "시형이 줄넘기",
+        "phase": "do",
+        "action": "updated"
+      }
+    ]
+  }
+}
