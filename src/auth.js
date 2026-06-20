@@ -370,12 +370,13 @@ function _homeHTML(){
   return `
   <style>
     @media(max-width:560px){
-      #home-hero{padding:60px 16px 40px!important;gap:20px!important}
-      #home-auth{padding:20px 16px!important}
-      #home-auth input,#home-auth button{font-size:.88rem!important}
+      #home-hero{padding:48px 14px 36px!important;gap:18px!important;min-height:calc(100vh - 46px)!important}
+      #home-auth{padding:18px 16px!important;border-radius:16px!important;margin:0 2px!important}
+      #home-auth .font-display,#home-auth h2{font-size:1rem!important}
     }
     @media(max-width:400px){
-      #home-hero{padding:50px 12px 32px!important}
+      #home-hero{padding:36px 10px 28px!important;gap:14px!important}
+      #home-auth{padding:16px 14px!important}
     }
   </style>
 

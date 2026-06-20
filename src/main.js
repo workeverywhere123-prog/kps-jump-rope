@@ -115,12 +115,10 @@ window.saveShowcaseData      = saveShowcaseData;
 // ── 진입점 ─────────────────────────────────
 window.onload = async () => {
   await ensureAdminAccount();
+  // 작업모드는 매 세션마다 수동으로 켜야 함 (자동 복원 안 함)
+  localStorage.removeItem('kps_admin');
+  S.adminMode = false;
   if(S.currentUser){
-    // 작업모드이면 항상 인벤토리 초기화 (새로고침·재방문 포함)
-    if(S.adminMode){
-      localStorage.removeItem(lsKey('inv'));
-      const _av=getAvatar(); if(_av){ _av.equipped={}; localStorage.setItem(lsKey('avatar'),JSON.stringify(_av)); }
-    }
     initUserState();
     renderUserBadge();
     if(!getAvatar().animal){
