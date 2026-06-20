@@ -69,9 +69,9 @@ body { font-family:'Noto Sans KR',sans-serif; background:#edf2f8; }
 /* ── 터치 최적화 ── */
 * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
 button, [onclick] { touch-action: manipulation; }
-/* iOS 입력창 자동 줌인 방지 */
 input[type="text"], input[type="password"], textarea { font-size: max(16px, 1em); }
-/* 가로 스크롤 방지 — html+body 모두 설정해야 iOS Safari에서 동작 */
+
+/* ── 가로 스크롤 방지 (html+body 모두 필요) ── */
 html { overflow-x: hidden; }
 body { overflow-x: hidden; max-width: 100vw; }
 
@@ -80,49 +80,119 @@ body { overflow-x: hidden; max-width: 100vw; }
   padding-bottom: calc(12px + env(safe-area-inset-bottom)) !important;
 }
 
-/* ── 모바일 헤더 최적화 ── */
+/* ════════════════════════════════════════
+   모바일 세로(Portrait) 전면 최적화
+   max-width: 540px
+════════════════════════════════════════ */
 @media (max-width: 540px) {
+
+  /* ── 헤더 ── */
   #header-inner {
-    padding: 5px 12px !important;
-    gap: 8px !important;
+    padding: 5px 10px !important;
+    gap: 6px !important;
   }
   #header-logo {
-    width: 34px !important;
-    height: 34px !important;
+    width: 32px !important;
+    height: 32px !important;
   }
-  #header-title-sub {
-    display: none !important;
+  /* 부제목 숨기기, 메인 타이틀은 복원 */
+  #header-title-sub { display: none !important; }
+  #header-title-main {
+    font-size: .78rem !important;
+    white-space: nowrap !important;
   }
-  #header-progress-section {
-    display: none !important;
+  #header-progress-section { display: none !important; }
+
+  /* ── 유저 배지: 아바타 + 로그아웃만 표시 ── */
+  #badge-info-col { display: none !important; }
+  #badge-logout-btn {
+    font-size: .6rem !important;
+    padding: 4px 6px !important;
+    white-space: nowrap !important;
   }
-  .nav-sub {
-    display: none !important;
+
+  /* ── 네비게이션: 균등 분할 탭 (6개 × 65px = 390px) ── */
+  .nav-sub { display: none !important; }
+  #nav-tab-bar {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
   }
+  #nav-tab-bar::-webkit-scrollbar { display: none; }
   #nav-tab-bar button {
-    padding: 8px 2px !important;
+    flex: 1 !important;
+    max-width: none !important;
+    min-width: 58px !important;
+    padding: 9px 2px !important;
   }
-  #nav-tab-bar button div:first-child {
-    font-size: .65rem !important;
+  /* 탭 텍스트 폰트 크기 (inline style 덮어쓰기) */
+  #nav-tab-bar button div:not(.nav-sub) {
+    font-size: .6rem !important;
+    letter-spacing: .03em !important;
   }
-  /* Achievement 히어로 패딩 */
+  /* Stage 탭의 "NEW" 뱃지 숨기기 — 텍스트를 가림 */
+  #tab-stage > div:first-child { display: none !important; }
+
+  /* ── Achievement 히어로 ── */
   .hero-bg {
-    padding: 18px 14px 16px !important;
+    padding: 16px 12px 14px !important;
   }
-  /* 스탯 카드 */
+  /* 히어로 타이틀 크기 */
+  .hero-bg > div:nth-child(2) {
+    font-size: clamp(1.3rem, 3.5vw, 2rem) !important;
+    margin-bottom: 10px !important;
+  }
+  /* 스탯 카드 3개 */
+  .hero-bg > div:last-child {
+    gap: 6px !important;
+  }
   .hero-bg > div:last-child > div {
-    padding: 8px 12px !important;
-    min-width: 70px !important;
+    padding: 8px 10px !important;
+    min-width: 0 !important;
+    flex: 1 !important;
   }
-  /* 콘텐츠 좌우 패딩 */
-  #skills-list {
-    padding: 0 12px !important;
+  .hero-bg > div:last-child > div > div:first-child {
+    font-size: 1.15rem !important;
   }
-  /* 데이 스트립 컨테이너 */
-  #days-strip-container {
+
+  /* ── 90일 진행 스트립 ── */
+  #page-achievement > div:last-child > div:first-child {
     padding: 12px 12px 10px !important;
   }
-  /* 각 페이지 콘텐츠 패딩 */
+
+  /* ── 오늘의 미션 타이틀 ── */
+  #routine-title {
+    font-size: 1rem !important;
+    padding: 0 4px !important;
+  }
+  /* 미션 헤더 섹션 패딩 */
+  #page-achievement > div:last-child > div:nth-child(2) {
+    padding: 16px 14px 10px !important;
+  }
+
+  /* ── 페이즈 바 ── */
+  #phase-bar > div {
+    padding: 8px 4px !important;
+  }
+  #phase-bar > div > div:first-child {
+    font-size: .72rem !important;
+  }
+  #phase-bar > div > div:last-child {
+    font-size: .6rem !important;
+  }
+
+  /* ── 스킬 카드 ── */
+  #skills-list {
+    padding: 0 10px !important;
+    gap: 14px !important;
+  }
+  #skills-list > div {
+    padding: 14px !important;
+    border-radius: 14px !important;
+  }
+
+  /* ── 각 페이지 컨텐츠 패딩 ── */
   #page-community > div:last-child,
   #page-connect > div:last-child,
   #page-gallery > div:last-child,
@@ -131,20 +201,48 @@ body { overflow-x: hidden; max-width: 100vw; }
     padding-left: 12px !important;
     padding-right: 12px !important;
   }
-  /* 헤더 타이틀 텍스트 숨기기 — 로고만 표시 */
-  #header-title-main { display: none !important; }
-  /* 유저 배지 — 정보 컬럼 숨기기 (아바타 + 로그아웃만 표시) */
-  #badge-info-col { display: none !important; }
-  #badge-logout-btn { font-size: .62rem !important; padding: 4px 7px !important; }
-  /* 푸터 — 2컬럼으로 변환 */
+  /* 각 페이지 카드 내 패딩 */
+  #page-community > div:last-child > div,
+  #page-connect > div:last-child > div,
+  #page-gallery > div:last-child > div,
+  #page-wellness > div:last-child > div {
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
+  }
+  /* Community: 팀 리더 카드 아바타 */
+  #leader-avatar-area {
+    width: 64px !important;
+    height: 80px !important;
+  }
+
+  /* ── Wellness 점수 기호 그리드 ── */
+  #page-wellness .score-grid,
+  #page-wellness [style*="auto-fill"] {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+  }
+
+  /* ── Connect 캘린더 ── */
+  #schedule-calendar td,
+  #schedule-calendar th {
+    padding: 4px 2px !important;
+    font-size: .68rem !important;
+  }
+
+  /* ── 푸터 ── */
   #footer-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 20px !important;
   }
+  footer {
+    padding: 28px 16px 20px !important;
+  }
+  #footer-grid > div:first-child > div:first-child > div:last-child {
+    font-size: .82rem !important;
+  }
 }
 
+/* ── 아주 작은 화면 (≤380px) ── */
 @media (max-width: 380px) {
-  /* 아주 작은 화면 — 푸터 1컬럼 */
   #footer-grid {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
